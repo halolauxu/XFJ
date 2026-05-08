@@ -1,0 +1,18 @@
+{
+  "name": "烽峻提分技巧库",
+  "short_name": "烽峻",
+  "description": "大连 2026 中考冲刺。围绕分科提分技巧，每个技巧来自历年真题溯源。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFAF7",
+  "theme_color": "#5BC0BE",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
