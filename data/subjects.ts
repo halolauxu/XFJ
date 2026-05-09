@@ -221,7 +221,7 @@ export const LOCKED_SUBJECTS: LockedSubjectMeta[] = [
   },
 ];
 
-export const TARGET_SCORE = 410;
+export const TARGET_SCORE = 430;
 export const DEFAULT_CURRENT = 360;
 export const EXAM_DATE = "2026-06-21";
 
