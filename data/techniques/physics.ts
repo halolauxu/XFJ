@@ -2514,4 +2514,187 @@ export const PHYSICS_TECHNIQUES: Technique[] = [
     coachPrompt:
       "考烽峻：物理压轴计算题 5 分钟没思路怎么办？答：写公式拿 1 分就走。",
   },
+
+  // ============ S1：选择题双策略 ============
+  {
+    id: "phy-S1-select-strategy",
+    subject: "physics",
+    title: "选择题双策略：审题划重点 + 排除法（含多选）",
+    examType: "单选 6 道 + 多选 3 道",
+    estGain: "+2-3 分",
+    priority: 0,
+    oneLiner:
+      "审题先圈 5 类限定词；多选用排除法宁少勿多（错选清零）。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用应试 + 多选评分铁律" },
+    ],
+    whyFits:
+      "你 36/90，多选题最容易丢分（错选清零）。审题 + 排除法 + 宁少勿多 = 防错损 +2-3 分。",
+    steps: [
+      "**审题 5 类必圈词**：",
+      "  · '**正确**' / '**不正确**' / '**错误**'",
+      "  · '**单选**' / '**多选**'（多选评分不同！）",
+      "  · '**最大** / **最小**'",
+      "  · '**变大** / **变小** / **不变**'",
+      "  · '**所有** / **某些**'",
+      "**多选题保命卡（评分铁律）**：",
+      "  · 全对 = 2 分",
+      "  · 对但不全（漏选）= 1 分",
+      "  · **错选 1 个 = 0 分（满盘清零！）**",
+      "  · 策略：只选 100% 确定的，宁少勿多",
+      "**排除法步骤**：",
+      "  · 先排明显错的",
+      "  · 单选剩 2 选 1 时蒙 C（物理 C 略高）",
+      "  · 多选剩 2-3 个时只选最稳的 1 个",
+    ],
+    example: {
+      id: "phy-S1-ex",
+      source: "predicted",
+      stem: "多选题：你只确定 A 对，B、C、D 不确定。最该怎么选？",
+      options: [
+        { key: "A", text: "只选 A（保 1 分）" },
+        { key: "B", text: "选 ABCD 全部（赌 2 分）" },
+        { key: "C", text: "都不选（0 分）" },
+        { key: "D", text: "随便选 2 个" },
+      ],
+      answer: "A",
+      whyCorrect:
+        "多选错选清零。只选 A = 保 1 分。选错任何 1 个 = 0 分。",
+    },
+    trainingQuestions: [
+      {
+        id: "phy-S1-q1",
+        source: "predicted",
+        stem: "多选评分规则下列说法正确的是（    ）",
+        options: [
+          { key: "A", text: "全对 = 满分；漏选 = 部分分；错选 = 0 分" },
+          { key: "B", text: "全对 = 满分；漏选 = 满分" },
+          { key: "C", text: "都不选 = 半分" },
+          { key: "D", text: "随便选都给分" },
+        ],
+        answer: "A",
+        whyCorrect: "标准规则。",
+      },
+      {
+        id: "phy-S1-q2",
+        source: "predicted",
+        stem: "多选你判 A、B 都对，C、D 都错。该怎么选？",
+        options: [
+          { key: "A", text: "只选 A" },
+          { key: "B", text: "选 AB" },
+          { key: "C", text: "选 ABC" },
+          { key: "D", text: "都不选" },
+        ],
+        answer: "B",
+        whyCorrect: "AB 都确定对就选 AB 拿 2 分。",
+      },
+      {
+        id: "phy-S1-q3",
+        source: "predicted",
+        stem: "下列**不是**多选题的稳妥策略？",
+        options: [
+          { key: "A", text: "只选 100% 确定的" },
+          { key: "B", text: "排除明显错的" },
+          { key: "C", text: "猜剩下的全选" },
+          { key: "D", text: "宁缺勿错" },
+        ],
+        answer: "C",
+        whyCorrect: "C 风险大。",
+      },
+      {
+        id: "phy-S1-q4",
+        source: "predicted",
+        stem: "下列说法**不正确**的是（    ）",
+        options: [
+          { key: "A", text: "速度越大动能越大" },
+          { key: "B", text: "质量越大动能越大" },
+          { key: "C", text: "动能不是矢量" },
+          { key: "D", text: "温度越高分子动能越大" },
+        ],
+        answer: "A",
+        hint1: "审题：**不正确**。",
+        hint2: "动能不仅和速度有关，还和质量有关。'越大' 不严谨。",
+        whyCorrect: "A 表述不严谨。",
+      },
+      {
+        id: "phy-S1-q5",
+        source: "predicted",
+        stem: "完全不会的物理单选题，蒙哪个字母概率较高？",
+        options: [
+          { key: "A", text: "A" },
+          { key: "B", text: "B" },
+          { key: "C", text: "C" },
+          { key: "D", text: "D" },
+        ],
+        answer: "C",
+        whyCorrect: "C 是物理选择'安全选项'。",
+      },
+      {
+        id: "phy-S1-q6",
+        source: "predicted",
+        stem:
+          "对一道多选题分析：A 对、B 错、C 对、D 不能判断。最佳选法？",
+        options: [
+          { key: "A", text: "选 ACD" },
+          { key: "B", text: "选 AC" },
+          { key: "C", text: "选 ABCD" },
+          { key: "D", text: "什么都不选" },
+        ],
+        answer: "B",
+        whyCorrect: "保住 AC 2 分，避免赌 D。",
+      },
+      {
+        id: "phy-S1-q7",
+        source: "predicted",
+        stem: "审题 5 类必圈词包括什么？",
+        answer:
+          "①正确/不正确；②单选/多选；③最大/最小；④变大/变小/不变；⑤所有/某些。",
+        whyCorrect: "5 类。",
+      },
+      {
+        id: "phy-S1-q8",
+        source: "predicted",
+        stem: "考场看到选择题花 2 分钟还在纠结。最佳做法？",
+        options: [
+          { key: "A", text: "继续硬想" },
+          { key: "B", text: "排除 + 凭直觉 + 标记返回" },
+          { key: "C", text: "空着" },
+          { key: "D", text: "随便选" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "phy-S1-q9",
+        source: "predicted",
+        stem: "下列对'多选不贪，错选清零'的理解正确的是（    ）",
+        options: [
+          { key: "A", text: "宁可少选拿 1 分，也不贪 2 分错选 0 分" },
+          { key: "B", text: "全选才能满分" },
+          { key: "C", text: "随便选" },
+          { key: "D", text: "多选都跳" },
+        ],
+        answer: "A",
+        whyCorrect: "稳健保分原则。",
+      },
+      {
+        id: "phy-S1-q10",
+        source: "predicted",
+        stem: "选择题双策略 + 多选保命铁律是？",
+        answer:
+          "①审题划重点；②排除法（单选）；③多选宁少勿多（错选清零）。",
+        whyCorrect: "本卡核心。",
+      },
+    ],
+    masteryTest: {
+      description: "5 道单选 + 3 道多选先圈词再答",
+      passThreshold: "8 题都圈对 + 多选无错选算掌握",
+    },
+    stuckResponses: {
+      no_start: "拿到选择题第 1 件事：圈题干关键词，分清单选还是多选。",
+      annoyed: "今天只练 1 件事：圈'正确/不正确'。",
+    },
+    coachPrompt:
+      "给烽峻一道多选让他先判'你 100% 确定哪几个对'，再让他选。**不让他猜**。",
+  },
 ];

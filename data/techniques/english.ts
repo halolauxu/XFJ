@@ -1988,4 +1988,176 @@ export const ENGLISH_TECHNIQUES: Technique[] = [
     coachPrompt:
       "听力已考完？是 → 跳过这卡。否 → 让烽峻识别 'I'd love to but...' 的真意。",
   },
+
+  // ============ S1：选择题双策略 ============
+  {
+    id: "en-S1-select-strategy",
+    subject: "english",
+    title: "选择题双策略：先看题再读文 + 排除法",
+    examType: "阅读 + 完形 + 语法填空",
+    estGain: "+3-5 分",
+    priority: 0,
+    oneLiner:
+      "阅读题先看题圈关键词，再回原文找；不会的题排除明显错的。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用阅读应试技巧" },
+    ],
+    whyFits:
+      "你 31/90，阅读题 + 完形是英语丢分大头。'先看题再读文' = 节省时间 + 提高准确率。",
+    steps: [
+      "**阅读题双策略**：",
+      "  · 第 1 步：**先看题**，把题里的关键词（人名/数字/时间/地名）圈出来",
+      "  · 第 2 步：回原文搜这些词，找到所在段落",
+      "  · 第 3 步：读那段附近 2-3 行，找答案",
+      "  · 第 4 步：选项不会就排除明显错的（与原文矛盾的）",
+      "**完形填空双策略**：",
+      "  · 看空前后两句，判**词性**（名/动/形/副）",
+      "  · 看上下文逻辑（因果/转折/并列）选连接词",
+      "  · 排除拼写错或不常见的词",
+      "**英语选择题蒙 B 概率最高**（不是 C，与中文学科不同）",
+    ],
+    example: {
+      id: "en-S1-ex",
+      source: "predicted",
+      stem:
+        "阅读理解题：'When did the first iPhone come out?'\nA. 2005  B. 2007  C. 2010  D. 2015\n\n[原文：'Steve Jobs unveiled the first iPhone on January 9, 2007.']",
+      answer: "B",
+      whyCorrect: "审题先圈'When'+'first iPhone'。回原文搜'first iPhone'找到 2007。",
+    },
+    trainingQuestions: [
+      {
+        id: "en-S1-q1",
+        source: "predicted",
+        stem:
+          "阅读题最佳做题顺序是？",
+        options: [
+          { key: "A", text: "先读全文再看题" },
+          { key: "B", text: "先看题圈关键词，再回原文搜" },
+          { key: "C", text: "随便看" },
+          { key: "D", text: "只看第一段" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "en-S1-q2",
+        source: "predicted",
+        stem: "完全不会的英语阅读题，蒙哪个字母概率较高？",
+        options: [
+          { key: "A", text: "A" },
+          { key: "B", text: "B" },
+          { key: "C", text: "C" },
+          { key: "D", text: "D" },
+        ],
+        answer: "B",
+        hint1: "英语选择 B 概率最高（与数学不同）。",
+        whyCorrect: "B 是英语'安全选项'。",
+      },
+      {
+        id: "en-S1-q3",
+        source: "predicted",
+        stem:
+          "完形填空看到空：'He ___ to school every day.' 最该判什么？",
+        options: [
+          { key: "A", text: "判时态：every day → 一般现在时" },
+          { key: "B", text: "判主语：He → 第三人称单数" },
+          { key: "C", text: "选 goes" },
+          { key: "D", text: "都对" },
+        ],
+        answer: "D",
+        whyCorrect: "三个步骤都对，最终选 goes。",
+      },
+      {
+        id: "en-S1-q4",
+        source: "predicted",
+        stem:
+          "阅读题问'When'，第一步该做什么？",
+        options: [
+          { key: "A", text: "通读全文" },
+          { key: "B", text: "回原文找'年份/日期/时间'词" },
+          { key: "C", text: "随便选" },
+          { key: "D", text: "看选项" },
+        ],
+        answer: "B",
+        whyCorrect: "When 类问题先找时间词。",
+      },
+      {
+        id: "en-S1-q5",
+        source: "predicted",
+        stem:
+          "阅读题问'Who'，第一步该做什么？",
+        answer: "回原文找人名/称谓词。",
+        whyCorrect: "Who → 找人名。",
+      },
+      {
+        id: "en-S1-q6",
+        source: "predicted",
+        stem: "下列对'排除法'描述**正确**的是（    ）",
+        options: [
+          { key: "A", text: "排除与原文矛盾的选项" },
+          { key: "B", text: "排除拼写错或不常见的词" },
+          { key: "C", text: "排除明显反义的选项" },
+          { key: "D", text: "都对" },
+        ],
+        answer: "D",
+        whyCorrect: "三种排除策略都对。",
+      },
+      {
+        id: "en-S1-q7",
+        source: "predicted",
+        stem:
+          "完形填空看到 'I was very tired ___ I went to bed early.' 该选什么连接词？",
+        options: [
+          { key: "A", text: "but" },
+          { key: "B", text: "so" },
+          { key: "C", text: "or" },
+          { key: "D", text: "if" },
+        ],
+        answer: "B",
+        hint1: "前后是因果关系。",
+        hint2: "tired → 早睡 = so（因果）。",
+        whyCorrect: "so 表因果。",
+      },
+      {
+        id: "en-S1-q8",
+        source: "predicted",
+        stem:
+          "考场上看到一道阅读题花 2 分钟还纠结。最佳做法？",
+        options: [
+          { key: "A", text: "继续硬想" },
+          { key: "B", text: "排除 1-2 个，凭直觉选剩下，标记返回" },
+          { key: "C", text: "空着" },
+          { key: "D", text: "随便选 A" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "en-S1-q9",
+        source: "predicted",
+        stem: "完形选择'词性判断' 5 类是？",
+        answer:
+          "①名词（the/a 后）；②动词（主语后）；③形容词（系动词后/名词前）；④副词（动词后/形容词前 -ly）；⑤代词（主语/宾语位置）。",
+        whyCorrect: "5 大词性。",
+      },
+      {
+        id: "en-S1-q10",
+        source: "predicted",
+        stem: "英语选择题双策略是？",
+        answer:
+          "①阅读：先看题圈关键词再回原文搜；②完形：判词性 + 看连接词逻辑；③不会蒙 B（不是 C）。",
+        whyCorrect: "本卡核心。",
+      },
+    ],
+    masteryTest: {
+      description: "5 道阅读 + 5 道完形先圈关键词再答",
+      passThreshold: "8/10 题都用对策略算掌握",
+    },
+    stuckResponses: {
+      no_start: "拿到阅读题第 1 件事：先看题，圈关键词，再回原文。",
+      annoyed: "今天只练 1 件事：先看题。",
+    },
+    coachPrompt:
+      "给烽峻一道阅读题让他**只看题圈关键词**。圈完才让他读原文。",
+  },
 ];

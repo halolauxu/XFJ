@@ -2263,4 +2263,197 @@ export const MATH_TECHNIQUES: Technique[] = [
     coachPrompt:
       "考烽峻：数学卷 22-23 题做不做？答：只写'解：'，不浪费时间。",
   },
+
+  // ============ S1：选择题双策略 ============
+  {
+    id: "math-S1-select-strategy",
+    subject: "math",
+    title: "选择题双策略：审题划重点 + 排除法",
+    examType: "选择题 10 道（30 分）",
+    estGain: "+3-6 分",
+    priority: 0,
+    oneLiner:
+      "审题先圈 5 类限定词；不会的题用排除法 4 选 1 → 2 选 1 提高蒙对率。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用应试技巧" },
+    ],
+    whyFits:
+      "你 18/120，选择题最大空间。审题不漏关键词 + 排除法 = 蒙对率从 25% 提到 50%。",
+    steps: [
+      "**审题 5 类必圈词**：",
+      "  · '**正确**' / '**不正确**' / '**错误**'",
+      "  · '**最大** / **最小**' / '**所有**' / '**至少** / **至多**'",
+      "  · '**等于**' / '**不等于**'",
+      "  · '**正数** / **负数**' / '**整数** / **分数**'",
+      "  · '**实数** / **有理数** / **无理数**'",
+      "**排除法步骤**：",
+      "  · 先排明显错的（带特殊值代入：x=0、x=1、x=-1）",
+      "  · 找最稳的剩下 1 个",
+      "  · 实在不会蒙 C（数学统计 C 略高）",
+      "**特殊值代入法**（数学专属）：",
+      "  · 选项含变量 → 代入 x=0、x=1、x=-1 看是否符合",
+      "  · 几何题 → 画极端图（如三角形退化为线段）",
+    ],
+    example: {
+      id: "math-S1-ex",
+      source: "predicted",
+      stem: "下列说法**不正确**的是（    ）",
+      options: [
+        { key: "A", text: "0 是最小的非负整数" },
+        { key: "B", text: "绝对值最小的数是 0" },
+        { key: "C", text: "0 是最小的有理数" },
+        { key: "D", text: "0 是非正非负整数" },
+      ],
+      answer: "C",
+      whyCorrect:
+        "审题：**不正确**。负数 < 0 < 正数，0 不是最小的有理数（如 -1 比 0 小）。",
+    },
+    trainingQuestions: [
+      {
+        id: "math-S1-q1",
+        source: "predicted",
+        stem: "下列说法**正确**的是（    ）",
+        options: [
+          { key: "A", text: "正数都比 0 大" },
+          { key: "B", text: "负数比正数大" },
+          { key: "C", text: "0 是最小的有理数" },
+          { key: "D", text: "绝对值最小的数是 1" },
+        ],
+        answer: "A",
+        hint1: "审题：**正确**。",
+        whyCorrect: "正数 > 0。",
+      },
+      {
+        id: "math-S1-q2",
+        source: "predicted",
+        stem: "下列计算**错误**的是（    ）",
+        options: [
+          { key: "A", text: "a²·a³ = a⁵" },
+          { key: "B", text: "(a²)³ = a⁶" },
+          { key: "C", text: "a²+a³ = a⁵" },
+          { key: "D", text: "(2a)² = 4a²" },
+        ],
+        answer: "C",
+        hint1: "审题：**错误**。",
+        hint2: "a²、a³ 不是同类项不能合并。",
+        whyCorrect: "C 错——同类项才能合并。",
+      },
+      {
+        id: "math-S1-q3",
+        source: "predicted",
+        stem: "完全不会的数学选择题，蒙哪个字母概率最高？",
+        options: [
+          { key: "A", text: "A" },
+          { key: "B", text: "B" },
+          { key: "C", text: "C" },
+          { key: "D", text: "D" },
+        ],
+        answer: "C",
+        whyCorrect: "C 是数学选择'安全选项'。",
+      },
+      {
+        id: "math-S1-q4",
+        source: "predicted",
+        stem:
+          "下列函数中**经过**原点的是（    ）",
+        options: [
+          { key: "A", text: "y = x + 1" },
+          { key: "B", text: "y = x²" },
+          { key: "C", text: "y = 1/x" },
+          { key: "D", text: "y = 2x + 3" },
+        ],
+        answer: "B",
+        hint1: "代入 x=0 看 y 是否为 0。",
+        hint2: "y=x² 代入 x=0 得 y=0 → 经过原点。",
+        whyCorrect: "B 经过原点。",
+      },
+      {
+        id: "math-S1-q5",
+        source: "predicted",
+        stem: "题干含限定词'**最简**'。下列**最简**根式是（    ）",
+        options: [
+          { key: "A", text: "√8" },
+          { key: "B", text: "√12" },
+          { key: "C", text: "√5" },
+          { key: "D", text: "√(1/2)" },
+        ],
+        answer: "C",
+        hint1: "审题：**最简**根式 = 被开方数不含完全平方因子。",
+        hint2: "√8=2√2，√12=2√3，√(1/2)=√2/2，都不是最简。",
+        whyCorrect: "C √5 是最简。",
+      },
+      {
+        id: "math-S1-q6",
+        source: "predicted",
+        stem: "题干圈关键词'**至少**'。下列说法符合'至少有 1 个'的是（    ）",
+        options: [
+          { key: "A", text: "0 个" },
+          { key: "B", text: "1 个" },
+          { key: "C", text: "2 个" },
+          { key: "D", text: "1 或 2 或更多" },
+        ],
+        answer: "D",
+        whyCorrect: "至少 = 1 或 ≥1。",
+      },
+      {
+        id: "math-S1-q7",
+        source: "predicted",
+        stem: "考场遇到选择题花 1 分钟还纠结。最佳做法？",
+        options: [
+          { key: "A", text: "继续硬想" },
+          { key: "B", text: "排除 1-2 个，凭直觉选剩下，标记返回" },
+          { key: "C", text: "空着" },
+          { key: "D", text: "随便选 A" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "math-S1-q8",
+        source: "predicted",
+        stem:
+          "下列对'特殊值代入法'描述**错误**的是（    ）",
+        options: [
+          { key: "A", text: "代入 x=0 / 1 / -1 试" },
+          { key: "B", text: "几何题画极端图" },
+          { key: "C", text: "随便代入复杂数字" },
+          { key: "D", text: "排除明显错的选项" },
+        ],
+        answer: "C",
+        whyCorrect: "C 错——代入特殊简单值，不是复杂数字。",
+      },
+      {
+        id: "math-S1-q9",
+        source: "predicted",
+        stem: "选择题双策略是？",
+        answer:
+          "①审题划重点（圈 5 类限定词）；②排除法（先去明显错的）。数学加'特殊值代入'。",
+        whyCorrect: "本卡核心。",
+      },
+      {
+        id: "math-S1-q10",
+        source: "predicted",
+        stem:
+          "下列**不属于**审题必圈词的是（    ）",
+        options: [
+          { key: "A", text: "正确/不正确" },
+          { key: "B", text: "最大/最小" },
+          { key: "C", text: "至少/至多" },
+          { key: "D", text: "的、了、和" },
+        ],
+        answer: "D",
+        whyCorrect: "连接词不必圈。",
+      },
+    ],
+    masteryTest: {
+      description: "5 道选择题先圈词再答",
+      passThreshold: "5 题都圈对算掌握",
+    },
+    stuckResponses: {
+      no_start: "拿到选择题第 1 件事：圈题干关键词。",
+      annoyed: "今天只练 1 件事：圈'正确/不正确'。",
+    },
+    coachPrompt:
+      "拿一道选择题让烽峻先**只圈关键词**。圈完才让他答。",
+  },
 ];

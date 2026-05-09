@@ -2090,4 +2090,540 @@ export const CHINESE_TECHNIQUES: Technique[] = [
     coachPrompt:
       "考烽峻：语文考场作文需要留多少分钟？答：50。",
   },
+
+  // ============ S1：选择题双策略（审题 + 排除）============
+  {
+    id: "cn-S1-select-strategy",
+    subject: "chinese",
+    title: "选择题双策略：审题划重点 + 排除法",
+    examType: "选择题（默写/字音字形/选择类）",
+    estGain: "+2-3 分",
+    priority: 0,
+    oneLiner:
+      "审题先圈 5 类限定词；不会的题先排除明显错的，把 4 选 1 变 2 选 1 提高蒙对率。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用应试技巧" },
+    ],
+    whyFits:
+      "你 58 分，选择题占语文约 10-15 分。审题不漏关键词 + 排除法 = 蒙对率从 25% 提到 50%。",
+    steps: [
+      "**审题 5 类必圈词**：",
+      "  · '**正确**' / '**不正确**' / '**有误**'",
+      "  · '**最恰当**' / '**最准确**'",
+      "  · '**全部**正确 / '**只有**一项错误'",
+      "  · '**字音**' / '**字形**' / '**词语**' / '**句子**'",
+      "  · '**修辞**' / '**手法**' / '**作用**'",
+      "**排除法步骤**：",
+      "  · 排明显错的（如题问'字音错误'，看到拼音熟悉对的就排）",
+      "  · 找最稳的剩下 1 个",
+      "  · 实在不会蒙 B（语文统计 B 概率略高）",
+    ],
+    example: {
+      id: "cn-S1-ex",
+      source: "predicted",
+      stem: "下列字音**全部正确**的一组是（    ）",
+      options: [
+        { key: "A", text: "潇洒（xiāo） 蹒跚（pán shān） 缄默（jiān）" },
+        { key: "B", text: "气氛（fèn）惩戒（chéng） 莅临（lì）" },
+        { key: "C", text: "称职（chèn） 殷红（yīn） 鲜为人知（xiǎn）" },
+        { key: "D", text: "阴霾（mái） 滂沱（pāng） 干瘪（biē）" },
+      ],
+      answer: "A",
+      whyCorrect:
+        "审题划重点：**全部正确**。逐字检查：B 气氛读 fēn 不是 fèn；C 殷红读 yān 不是 yīn；D 干瘪读 biě 不是 biē。A 全对。",
+    },
+    trainingQuestions: [
+      {
+        id: "cn-S1-q1",
+        source: "predicted",
+        stem: "下列字形**有误**的一组是（    ）",
+        options: [
+          { key: "A", text: "锐不可当 心旷神怡 锲而不舍" },
+          { key: "B", text: "再接再励 不可名状 振耳欲聋" },
+          { key: "C", text: "目不暇接 恍然大悟 望洋兴叹" },
+          { key: "D", text: "如释重负 草长莺飞 一泻千里" },
+        ],
+        answer: "B",
+        hint1: "审题：**有误**。",
+        hint2: "再接再厉 / 震耳欲聋。",
+        whyCorrect: "B 错——再接再厉、震耳欲聋。",
+      },
+      {
+        id: "cn-S1-q2",
+        source: "predicted",
+        stem:
+          "题干：'下列对古诗赏析**不正确**的是'。审题该圈哪几个字？",
+        answer: "圈'不正确'三字。",
+        whyCorrect: "限定词必圈。",
+      },
+      {
+        id: "cn-S1-q3",
+        source: "predicted",
+        stem: "完全不会的语文选择题，蒙哪个字母概率较高？",
+        options: [
+          { key: "A", text: "A" },
+          { key: "B", text: "B" },
+          { key: "C", text: "C" },
+          { key: "D", text: "D" },
+        ],
+        answer: "B",
+        hint1: "语文选择 B 概率略高。",
+        whyCorrect: "B 是语文选择'安全选项'。",
+      },
+      {
+        id: "cn-S1-q4",
+        source: "predicted",
+        stem:
+          "下列病句**修改正确**的是（    ）",
+        options: [
+          { key: "A", text: "通过这次活动，使我懂得了感恩。（删'通过'或'使'）" },
+          { key: "B", text: "他不仅会说英语，而且会说法语和俄语。（已正确）" },
+          { key: "C", text: "我们要培养独立思考和善于解决问题的能力。" },
+          { key: "D", text: "由于他的努力工作，使我们提前完成了任务。（删'由于'）" },
+        ],
+        answer: "B",
+        hint1: "B 选项本身就正确。",
+        hint2: "A、D 都是常见介词导致主语缺失病句的修改。",
+        whyCorrect: "B 是正确的现成句。",
+      },
+      {
+        id: "cn-S1-q5",
+        source: "predicted",
+        stem: "下列对修辞**判断正确**的是（    ）",
+        options: [
+          { key: "A", text: "'桃花潭水深千尺，不及汪伦送我情'——比喻" },
+          { key: "B", text: "'桃花潭水深千尺，不及汪伦送我情'——夸张" },
+          { key: "C", text: "'桃花潭水深千尺，不及汪伦送我情'——拟人" },
+          { key: "D", text: "'桃花潭水深千尺，不及汪伦送我情'——对比" },
+        ],
+        answer: "B",
+        hint1: "深千尺 = 夸张（数字夸大）。",
+        whyCorrect: "夸张修辞。",
+      },
+      {
+        id: "cn-S1-q6",
+        source: "predicted",
+        stem: "审题画重点 5 类必圈词包括什么？",
+        answer:
+          "①正确/不正确/有误；②最恰当/最准确；③全部/只有一项；④字音/字形/词语/句子；⑤修辞/手法/作用。",
+        whyCorrect: "5 类必圈词。",
+      },
+      {
+        id: "cn-S1-q7",
+        source: "predicted",
+        stem: "考场遇到选择题花 1 分钟还纠结。最佳做法？",
+        options: [
+          { key: "A", text: "继续硬想" },
+          { key: "B", text: "排除 1-2 个，凭直觉选剩下，标记返回" },
+          { key: "C", text: "空着" },
+          { key: "D", text: "随便选" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "cn-S1-q8",
+        source: "predicted",
+        stem:
+          "下列加点字**读音相同**的一组是（    ）",
+        options: [
+          { key: "A", text: "宁静 宁愿" },
+          { key: "B", text: "扎实 挣扎" },
+          { key: "C", text: "薄弱 薄饼" },
+          { key: "D", text: "乘客 乘风破浪" },
+        ],
+        answer: "D",
+        hint1: "审题：**读音相同**。",
+        hint2: "宁 níng/nìng；扎 zhā/zhá；薄 báo/bó；乘都读 chéng。",
+        whyCorrect: "D 都读 chéng。",
+      },
+      {
+        id: "cn-S1-q9",
+        source: "predicted",
+        stem: "下列对'排除法'描述**错误**的是（    ）",
+        options: [
+          { key: "A", text: "先排明显错的" },
+          { key: "B", text: "把 4 选 1 变 2 选 1" },
+          { key: "C", text: "提高蒙对率" },
+          { key: "D", text: "不用排除直接蒙" },
+        ],
+        answer: "D",
+        whyCorrect: "D 错——必须先排除。",
+      },
+      {
+        id: "cn-S1-q10",
+        source: "predicted",
+        stem: "选择题双策略是？",
+        answer:
+          "①审题划重点（圈 5 类限定词）；②排除法（先去明显错的）。",
+        whyCorrect: "本卡核心。",
+      },
+    ],
+    masteryTest: {
+      description: "5 道选择题先圈词再答",
+      passThreshold: "5 题都圈对算掌握",
+    },
+    stuckResponses: {
+      no_start: "拿到选择题第 1 件事：圈题干关键词。",
+      annoyed: "今天只练 1 件事：圈'正确/不正确'。",
+    },
+    coachPrompt:
+      "拿一道选择题让烽峻先**只圈关键词**。圈完才让他答。",
+  },
+
+  // ============ S2：作文 6 段式骨架 ============
+  {
+    id: "cn-S2-essay-skeleton",
+    subject: "chinese",
+    title: "作文 6 段式骨架（开头-起因-发展-高潮-感悟-结尾）",
+    examType: "作文（50 分）",
+    estGain: "+5-8 分（卷面结构分）",
+    priority: 0,
+    oneLiner:
+      "6 段写满 700-800 字。每段 1 个画面或 1 个动作，结构清楚老师秒判分。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用作文应试技巧" },
+    ],
+    whyFits:
+      "你作文跑题 / 结构散是头号丢分点。6 段骨架熟练后，看到任何题都能 5 分钟出大纲。",
+    steps: [
+      "**6 段固定结构**：",
+      "  · ①**开头**（80-100 字）：抒情/设问/场景式开头 + 必扣题",
+      "  · ②**起因**（100-120 字）：交代时间地点 + 一件具体小事",
+      "  · ③**发展**（150 字）：具体动作 + 细节描写",
+      "  · ④**高潮**（150 字）：转折点 + 内心活动",
+      "  · ⑤**感悟**（120 字）：从事件升华到道理",
+      "  · ⑥**结尾**（80-100 字）：升华/回扣/引用式 + 必扣题",
+      "**铁律**：开头结尾**必扣题**（标题词原样出现）。",
+      "**字数控制**：6 段共 700-800 字最稳。",
+    ],
+    example: {
+      id: "cn-S2-ex",
+      source: "predicted",
+      stem:
+        "题目《那一刻我懂了》。请用 6 段式骨架写大纲。",
+      answer:
+        "①开头：'有些事，要等很久才能明白；那一刻，我突然懂了。'\n②起因：'去年夏天回老家，奶奶在厨房忙了一下午。'\n③发展：'我推门进去，看到奶奶弯着腰，在灶台前擦汗。'\n④高潮：'她看见我，眼睛一亮，把第一碗汤递给我，自己却没吃。'\n⑤感悟：'那一刻我懂了——爱不是说出来的，是省出来的。'\n⑥结尾：'就是那一刻，我懂了什么是真正的疼爱。'",
+      whyFitsStudent: "6 段骨架适用所有命题/半命题作文。",
+      whyCorrect: "结构清晰 + 必扣题（'那一刻'+'懂'多次出现）。",
+    },
+    trainingQuestions: [
+      {
+        id: "cn-S2-q1",
+        source: "real",
+        citation: {
+          kind: "real",
+          year: 2025,
+          region: "大连市",
+          paper: "中考真题",
+          qno: "作文",
+          topic: "他们与我",
+        },
+        stem: "题目《他们与我》（2025 大连）。请用 6 段式骨架写大纲。",
+        answer:
+          "①开头：抒情式'夜深，台灯昏黄。又一次想起雨天里他们撑伞送我'\n②起因：考试前夕的某个雨天\n③发展：放学路上下大雨，几个同学撑伞围成一圈送我回家\n④高潮：他们没说话，只是默默走在我两侧\n⑤感悟：他们不是过客，是我成长路上撑伞的人\n⑥结尾：升华扣题'他们与我'",
+        whyCorrect: "6 段齐 + 扣题。",
+      },
+      {
+        id: "cn-S2-q2",
+        source: "real",
+        citation: {
+          kind: "real",
+          year: 2024,
+          region: "大连市",
+          paper: "中考真题",
+          qno: "作文",
+          topic: "无声之处亦有深味",
+        },
+        stem: "题目《无声之处亦有深味》（2024 大连）。请用 6 段式骨架写大纲。",
+        answer:
+          "①开头：场景式'雨落屋瓦，无声胜有声'\n②起因：父亲沉默送我去考场\n③发展：一路他没说话，但提了三次伞\n④高潮：考场门口他塞了个温水袋给我\n⑤感悟：无声里藏的是最深的爱\n⑥结尾：扣题'无声之处亦有深味'",
+        whyCorrect: "6 段 + 扣题。",
+      },
+      {
+        id: "cn-S2-q3",
+        source: "real",
+        citation: {
+          kind: "real",
+          year: 2023,
+          region: "大连市",
+          paper: "中考真题",
+          qno: "作文",
+          topic: "点点善意暖人心",
+        },
+        stem: "题目《点点善意暖人心》（2023 大连）。请用 6 段式骨架写大纲。",
+        answer:
+          "①开头：'一颗善意，能融化一冬的寒'\n②起因：寒冬骑车回家车胎扎了\n③发展：陌生大叔主动停车帮我修\n④高潮：他不要钱，骑走前喊了句'路上小心'\n⑤感悟：那些点点善意让我懂得人心也能温暖\n⑥结尾：扣题'点点善意暖人心'",
+        whyCorrect: "扣题 3 处 + 6 段。",
+      },
+      {
+        id: "cn-S2-q4",
+        source: "predicted",
+        stem: "题目《那盏灯》。用 6 段式骨架写大纲。",
+        answer:
+          "①开头：'每天晚自习回来，门口那盏灯总亮着。'\n②起因：初三晚自习，常 9 点回家\n③发展：妈妈坐在灯下织毛衣等我\n④高潮：我让她别等，她说'灯亮着，我才安心'\n⑤感悟：那盏灯，照亮的不是路，是我心里的家\n⑥结尾：扣题'那盏灯'",
+        whyCorrect: "象征 + 扣题。",
+      },
+      {
+        id: "cn-S2-q5",
+        source: "predicted",
+        stem: "作文 6 段固定结构是？",
+        answer:
+          "①开头（80-100 字，抒情/设问/场景式 + 扣题）\n②起因（100-120 字）\n③发展（150 字，具体动作）\n④高潮（150 字，转折）\n⑤感悟（120 字，升华）\n⑥结尾（80-100 字，升华/回扣 + 扣题）",
+        whyCorrect: "本卡核心 6 段。",
+      },
+      {
+        id: "cn-S2-q6",
+        source: "predicted",
+        stem: "字数控制目标是多少字最稳？",
+        options: [
+          { key: "A", text: "500 字" },
+          { key: "B", text: "600 字" },
+          { key: "C", text: "700-800 字" },
+          { key: "D", text: "1000 字以上" },
+        ],
+        answer: "C",
+        whyCorrect: "700-800 字最稳。",
+      },
+      {
+        id: "cn-S2-q7",
+        source: "predicted",
+        stem: "下列对作文'扣题'要求**错误**的是（    ）",
+        options: [
+          { key: "A", text: "标题词必出现在开头" },
+          { key: "B", text: "标题词必出现在结尾" },
+          { key: "C", text: "中间段不需要扣题" },
+          { key: "D", text: "至少扣题 3 处" },
+        ],
+        answer: "C",
+        whyCorrect: "中间段也建议扣题，至少 3 处。",
+      },
+      {
+        id: "cn-S2-q8",
+        source: "predicted",
+        stem: "下列段落组合**符合** 6 段式骨架的是（    ）",
+        options: [
+          { key: "A", text: "开头 + 议论 + 结尾（3 段）" },
+          { key: "B", text: "开头 + 起因 + 发展 + 高潮 + 感悟 + 结尾（6 段）" },
+          { key: "C", text: "全文 1 段" },
+          { key: "D", text: "开头 + 结尾（2 段）" },
+        ],
+        answer: "B",
+        whyCorrect: "标准 6 段。",
+      },
+      {
+        id: "cn-S2-q9",
+        source: "predicted",
+        stem: "高潮段最该写什么？",
+        answer:
+          "转折点（事件突变 / 内心翻转） + 内心活动描写。约 150 字。",
+        whyCorrect: "高潮段定义。",
+      },
+      {
+        id: "cn-S2-q10",
+        source: "predicted",
+        stem: "感悟段最该写什么？",
+        answer:
+          "从事件升华到普遍道理（120 字）。如：'那一刻我懂了——___'。",
+        whyCorrect: "感悟段定义。",
+      },
+    ],
+    masteryTest: {
+      description: "1 题作文写出 6 段大纲（每段 1-2 句）",
+      passThreshold: "6 段全到 + 扣题 3 处算掌握",
+    },
+    stuckResponses: {
+      no_start: "先写开头扣题。再写 1 件具体小事填中间 4 段。",
+      annoyed: "今天只搭骨架，不写正文。3 分钟。",
+    },
+    coachPrompt:
+      "让烽峻挑 1 个题目先列 6 段大纲，每段 1 句话。完成后再展开正文。",
+  },
+
+  // ============ S3：时间分配 + 跳题策略 ============
+  {
+    id: "cn-S3-time-skip",
+    subject: "chinese",
+    title: "语文考试时间分配 + 跳题策略",
+    examType: "全卷应试技巧",
+    estGain: "+2-3 分（间接）",
+    priority: 1,
+    oneLiner:
+      "150 分钟卷面：默写 10 + 文言 25 + 古诗 5 + 现代文 30 + 非连续 15 + **作文 50** + 检查 15。",
+    sourceTrace: [
+      { kind: "placeholder", note: "通用应试" },
+    ],
+    whyFits:
+      "你目标 70 分。最大杀手是作文写不完丢 10 分以上。**作文留 50 分钟是铁律**。",
+    steps: [
+      "**150 分钟分配**：",
+      "  · 默写 8 分（10 分钟）",
+      "  · 文言文 + 古诗赏析（25 分钟）",
+      "  · 现代文阅读 17 分（30 分钟）",
+      "  · 非连续性文本 8 分（15 分钟）",
+      "  · **作文 50 分（50 分钟必留）**",
+      "  · 检查（15 分钟）",
+      "**跳题铁律**：",
+      "  · 开放探究题不会就跳（写一两句套话占位）",
+      "  · 现代文最难的'句子赏析'题套'三段论'模板",
+      "  · 文言翻译卡住先抄原文意译",
+    ],
+    example: {
+      id: "cn-S3-ex",
+      source: "predicted",
+      stem:
+        "考场上做完前 3 大题用了 80 分钟，剩 70 分钟。最该做什么？",
+      options: [
+        { key: "A", text: "立刻开始写作文（留 50 分钟）" },
+        { key: "B", text: "回头检查前面 3 题（用掉 30 分钟再写作文）" },
+        { key: "C", text: "做最难的现代文阅读探究题" },
+        { key: "D", text: "随便写一会儿作文" },
+      ],
+      answer: "A",
+      whyCorrect: "作文 50 分大头。时间不够会丢 10 分以上。",
+    },
+    trainingQuestions: [
+      {
+        id: "cn-S3-q1",
+        source: "predicted",
+        stem: "作文用时建议是（    ）分钟？",
+        options: [
+          { key: "A", text: "30" },
+          { key: "B", text: "50" },
+          { key: "C", text: "100" },
+          { key: "D", text: "20" },
+        ],
+        answer: "B",
+        whyCorrect: "1 分 1 分钟，作文 50 分需 50 分钟。",
+      },
+      {
+        id: "cn-S3-q2",
+        source: "predicted",
+        stem:
+          "做现代文阅读遇到'结合生活体验谈感受'类开放题不会做。最该做什么？",
+        options: [
+          { key: "A", text: "继续硬想" },
+          { key: "B", text: "写一两句敷衍即可，不浪费时间" },
+          { key: "C", text: "完全留白" },
+          { key: "D", text: "胡乱抄上文" },
+        ],
+        answer: "B",
+        whyCorrect: "B 性价比最优。",
+      },
+      {
+        id: "cn-S3-q3",
+        source: "predicted",
+        stem: "下列对'目标 70 分'的拆分合理的是（    ）",
+        options: [
+          { key: "A", text: "默写 5 + 文言 4 + 古诗 3 + 现代文 8 + 非连续 4 + 作文 36 + 综合 10 = 70" },
+          { key: "B", text: "全靠作文（70 分）" },
+          { key: "C", text: "全靠选择" },
+          { key: "D", text: "全靠运气" },
+        ],
+        answer: "A",
+        whyCorrect: "拆分多分块更稳。",
+      },
+      {
+        id: "cn-S3-q4",
+        source: "predicted",
+        stem:
+          "考场上发现作文剩 30 分钟。最该做的是（    ）",
+        options: [
+          { key: "A", text: "继续完美开头" },
+          { key: "B", text: "立刻收尾，留出至少 5 分钟检查" },
+          { key: "C", text: "随便写到结尾" },
+          { key: "D", text: "放弃作文" },
+        ],
+        answer: "B",
+        whyCorrect: "B 是最优策略。",
+      },
+      {
+        id: "cn-S3-q5",
+        source: "predicted",
+        stem: "考前 5 分钟最重要的事是（    ）",
+        options: [
+          { key: "A", text: "再复习课本" },
+          { key: "B", text: "检查答题卡填涂 + 作文是否签名" },
+          { key: "C", text: "做难题" },
+          { key: "D", text: "睡一会" },
+        ],
+        answer: "B",
+        whyCorrect: "检查填涂避免低级丢分。",
+      },
+      {
+        id: "cn-S3-q6",
+        source: "predicted",
+        stem: "下列时间分配建议**错误**的是（    ）",
+        options: [
+          { key: "A", text: "默写 + 文言 ≤ 30 分钟" },
+          { key: "B", text: "现代文 + 非连续 ≤ 60 分钟" },
+          { key: "C", text: "作文 ≤ 30 分钟" },
+          { key: "D", text: "留 10 分钟检查" },
+        ],
+        answer: "C",
+        whyCorrect: "C 错——作文要 50 分钟。",
+      },
+      {
+        id: "cn-S3-q7",
+        source: "predicted",
+        stem: "默写题做错答多空。最该做的是（    ）",
+        options: [
+          { key: "A", text: "全部空着" },
+          { key: "B", text: "全部凭印象写一些" },
+          { key: "C", text: "只写记得的，不会的空着" },
+          { key: "D", text: "找别人抄" },
+        ],
+        answer: "C",
+        whyCorrect: "默写错字不给分但部分空也算分。",
+      },
+      {
+        id: "cn-S3-q8",
+        source: "predicted",
+        stem: "整套语文卷做完后剩 5 分钟，最该做的是（    ）",
+        options: [
+          { key: "A", text: "完美最后 1 题" },
+          { key: "B", text: "检查作文是否分段、字数、签名" },
+          { key: "C", text: "睡觉" },
+          { key: "D", text: "重写作文" },
+        ],
+        answer: "B",
+        whyCorrect: "B 最关键。",
+      },
+      {
+        id: "cn-S3-q9",
+        source: "predicted",
+        stem: "做完默写文言用了 30 分钟。剩 120 分钟最该做（    ）",
+        options: [
+          { key: "A", text: "立刻开始写作文" },
+          { key: "B", text: "现代文阅读" },
+          { key: "C", text: "古诗文阅读" },
+          { key: "D", text: "再检查默写" },
+        ],
+        answer: "B",
+        whyCorrect: "现代文是必做大题，先做。",
+      },
+      {
+        id: "cn-S3-q10",
+        source: "predicted",
+        stem: "下列考试策略**错误**的是（    ）",
+        options: [
+          { key: "A", text: "作文写到 700 字" },
+          { key: "B", text: "默写答题不空" },
+          { key: "C", text: "文言文翻译完整每句" },
+          { key: "D", text: "全部题目按顺序做完不跳" },
+        ],
+        answer: "D",
+        whyCorrect: "D 错——遇难题应跳。",
+      },
+    ],
+    masteryTest: {
+      description: "1 套真题模拟 150 分钟，按本时间分配",
+      passThreshold: "作文用满 50 分钟 + 总用时 ≤ 150 分钟",
+    },
+    stuckResponses: {
+      annoyed: "今天不模考。只记口诀：'作文留 50 分钟，开放题跳'。",
+    },
+    coachPrompt:
+      "考烽峻：'语文考场作文需要留多少分钟？'答：50。",
+  },
 ];
