@@ -190,14 +190,18 @@ export default function HomePage() {
                       {isLocked
                         ? "已考完"
                         : cons != null && cur != null
-                        ? `+${cons - cur}`
+                        ? cons - cur === 0
+                          ? "已满分"
+                          : `+${cons - cur}`
                         : "待确认"}
                     </td>
                     <td className="text-center text-ink-500 text-[11px] md:text-xs rounded-r">
                       {isLocked
                         ? "已考完"
                         : opt != null && cur != null
-                        ? `+${opt - cur}`
+                        ? opt - cur === 0
+                          ? "已满分"
+                          : `+${opt - cur}`
                         : "待确认"}
                     </td>
                   </tr>
@@ -316,7 +320,7 @@ export default function HomePage() {
       {/* 块 4：地生 + 体育 状态条 */}
       <Card className="bg-ink-100/30 border-ink-100">
         <div className="text-xs text-ink-500 leading-relaxed">
-          地理 + 生物 已考完（58/80）· 体育按实际成绩（去和老师确认）。这两科不在技巧库里。
+          地理 + 生物 已考完（68/80）· 体育已满分（60/60）。这两科不在技巧库里。
         </div>
       </Card>
 

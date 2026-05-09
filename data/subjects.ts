@@ -206,23 +206,23 @@ export const LOCKED_SUBJECTS: LockedSubjectMeta[] = [
   {
     key: "bioGeo",
     name: "地理 + 生物",
-    current: 58,
+    current: 68,
     fullScore: 80,
     note: "已经考完，不再提分。",
   },
   {
     key: "pe",
     name: "体育",
-    current: null,
+    current: 60,
     fullScore: 60,
-    conservative: 50,
-    optimistic: 55,
-    note: "先确认实际得分（过程性 30 + 终结性 30），不能白丢。",
+    conservative: 60,
+    optimistic: 60,
+    note: "已满分，过程性 + 终结性合计满分。",
   },
 ];
 
 export const TARGET_SCORE = 410;
-export const DEFAULT_CURRENT = 335;
+export const DEFAULT_CURRENT = 360;
 export const EXAM_DATE = "2026-06-21";
 
 // 数据来源说明
