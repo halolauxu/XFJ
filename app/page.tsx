@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronRight, Info } from "lucide-react";
+import { ChevronRight, FileText, Info } from "lucide-react";
 import { LOCKED_SUBJECTS, SUBJECTS, TARGET_SCORE } from "@/data/subjects";
 import { TECHNIQUE_COUNT_BY_SUBJECT } from "@/data/techniques";
 import { useStudent } from "@/store/useStudent";
@@ -242,7 +242,36 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* 块 3：分科技巧入口 */}
+      {/* 块 3：3+2 升学报告入口 */}
+      <Link
+        href="/zhongkao-32-report"
+        className="group block rounded-card bg-paper-50 border border-primary-200 shadow-soft p-5 tap-shrink hover:shadow-lift transition"
+      >
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-card bg-primary-50 text-primary-700">
+              <FileText size={20} />
+            </div>
+            <div>
+              <div className="text-xs font-medium text-primary-700">
+                完整升学报考规划
+              </div>
+              <h2 className="mt-1 text-base font-semibold text-ink-900">
+                大连中考 3+2 升学报考规划方案
+              </h2>
+              <p className="mt-1 text-xs md:text-sm leading-relaxed text-ink-700">
+                V4 · 2026 招生简章对齐版 · 含分数定位、专业清单、志愿组合与电话确认清单
+              </p>
+            </div>
+          </div>
+          <ChevronRight
+            size={18}
+            className="mt-1 shrink-0 text-ink-300 group-hover:text-primary-700 transition-colors"
+          />
+        </div>
+      </Link>
+
+      {/* 块 4：分科技巧入口 */}
       <div>
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-base font-semibold text-ink-900">分科提分技巧</h2>
@@ -317,7 +346,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* 块 4：地生 + 体育 状态条 */}
+      {/* 块 5：地生 + 体育 状态条 */}
       <Card className="bg-ink-100/30 border-ink-100">
         <div className="text-xs text-ink-500 leading-relaxed">
           地理 + 生物 已考完（68/80）· 体育已满分（60/60）。这两科不在技巧库里。

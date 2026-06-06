@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Map, BarChart3 } from "lucide-react";
+import { BarChart3, FileText, Home, Map } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
   { href: "/", label: "首页", icon: Home },
+  { href: "/zhongkao-32-report", label: "3+2报告", icon: FileText },
   { href: "/subjects", label: "分科技巧", icon: Map },
   { href: "/progress", label: "进度", icon: BarChart3 },
 ];
@@ -52,7 +53,7 @@ export function Nav() {
 
       {/* 移动端底部导航 */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-paper/95 backdrop-blur border-t border-ink-100 safe-bottom">
-        <div className="grid grid-cols-3 px-1 pt-1">
+        <div className="grid grid-cols-4 px-1 pt-1">
           {NAV.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);

@@ -35,3 +35,4 @@ fi
 pm2 status fengjun-tips
 echo ""
 echo "✓ 部署完成。访问 http://<server>:6601"
+echo "✓ 3+2 升学报告入口：http://<server>:6601/zhongkao-32-report"

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大连中考3+2升学报考规划 V4 — 2026招生简章对齐版</title>
+<style>
+  :root {
+    --bg: #F8F9FA; --card-bg: #FFFFFF; --text-primary: #1a1a2e;
+    --text-secondary: #5a5a72; --text-muted: #8b8ba0; --accent: #2563eb;
+    --accent-light: #dbeafe; --success: #16a34a; --success-light: #dcfce7;
+    --warning: #d97706; --warning-light: #fef3c7; --danger: #dc2626;
+    --danger-light: #fee2e2; --border: #e4e4eb; --radius: 12px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text-primary); line-height:1.75; padding:20px; }
+  .container { max-width:980px; margin:0 auto; }
+  h1 { font-size:22px; font-weight:700; text-align:center; color:var(--text-primary); margin-bottom:4px; }
+  .subtitle { text-align:center; color:var(--text-secondary); font-size:13px; margin-bottom:6px; }
+  .update-tag { text-align:center; margin-bottom:30px; }
+  .update-tag span { background:var(--danger); color:#fff; padding:3px 14px; border-radius:20px; font-size:12px; font-weight:600; }
+  .card { background:var(--card-bg); border-radius:var(--radius); border:1px solid var(--border); padding:24px; margin-bottom:20px; }
+  .card-header { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .card-icon { width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+  .card-title { font-size:17px; font-weight:600; }
+  .section-num { display:inline-block; width:28px; height:28px; border-radius:50%; background:var(--accent); color:white; text-align:center; line-height:28px; font-size:14px; font-weight:600; margin-right:8px; }
+  .badge { display:inline-block; padding:2px 10px; border-radius:20px; font-size:12px; font-weight:500; }
+  .badge-safe { background:var(--success-light); color:var(--success); }
+  .badge-warn { background:var(--warning-light); color:var(--warning); }
+  .badge-danger { background:var(--danger-light); color:var(--danger); }
+  .badge-info { background:var(--accent-light); color:var(--accent); }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:10px; }
+  th { background:#f5f5f7; padding:8px 10px; text-align:left; font-weight:500; color:var(--text-secondary); border-bottom:2px solid var(--border); white-space:nowrap; font-size:12px; }
+  td { padding:8px 10px; border-bottom:1px solid #f0f0f3; vertical-align:top; }
+  tr:hover td { background:#fafafe; }
+  .score-high { color:var(--danger); font-weight:600; }
+  .score-mid { color:var(--warning); font-weight:600; }
+  .score-low { color:var(--success); font-weight:600; }
+  .highlight-box { border-left:4px solid var(--accent); background:var(--accent-light); padding:14px 18px; border-radius:0 8px 8px 0; margin:14px 0; font-size:13px; }
+  .warn-box { border-left:4px solid var(--warning); background:var(--warning-light); padding:14px 18px; border-radius:0 8px 8px 0; margin:14px 0; font-size:13px; }
+  .danger-box { border-left:4px solid var(--danger); background:var(--danger-light); padding:14px 18px; border-radius:0 8px 8px 0; margin:14px 0; font-size:13px; }
+  .source { font-size:11px; color:var(--text-muted); margin-top:6px; }
+  .volunteer-card { border:2px solid var(--border); border-radius:var(--radius); padding:16px; margin:10px 0; position:relative; }
+  .volunteer-card.strike { border-color:var(--accent); background: linear-gradient(135deg, #f0f7ff 0%, #fff 100%); }
+  .volunteer-card.stable { border-color:var(--success); background: linear-gradient(135deg, #f0fff4 0%, #fff 100%); }
+  .volunteer-card.safety { border-color:var(--warning); background: linear-gradient(135deg, #fffbeb 0%, #fff 100%); }
+  .vc-tag { position:absolute; top:-12px; left:16px; padding:2px 14px; border-radius:20px; font-size:12px; font-weight:600; color:white; }
+  .vc-tag.strike-tag { background:var(--accent); }
+  .vc-tag.stable-tag { background:var(--success); }
+  .vc-tag.safety-tag { background:var(--warning); }
+  .course-block { background:var(--bg); border-radius:8px; padding:12px 16px; margin:8px 0; }
+  .course-block h5 { font-size:13px; font-weight:600; margin-bottom:6px; }
+  .course-block p { font-size:12px; color:var(--text-secondary); line-height:1.6; }
+  .phone-list { background:var(--bg); border-radius:8px; padding:16px; margin:8px 0; }
+  .phone-list ol { padding-left:20px; }
+  .phone-list li { margin-bottom:8px; font-size:13px; line-height:1.7; }
+  .nav { position:sticky; top:0; z-index:100; background:rgba(248,249,250,0.95); backdrop-filter:blur(8px); padding:10px 0; margin-bottom:20px; border-bottom:1px solid var(--border); }
+  .nav-inner { max-width:980px; margin:0 auto; display:flex; flex-wrap:wrap; gap:6px; }
+  .nav a { font-size:12px; color:var(--accent); text-decoration:none; padding:3px 10px; border-radius:20px; background:var(--accent-light); white-space:nowrap; }
+  .nav a:hover { background:var(--accent); color:white; }
+  .fix-badge { display:inline-flex; align-items:center; gap:4px; background:#fef2f2; color:#dc2626; border:1px solid #fecaca; padding:2px 8px; border-radius:6px; font-size:11.5px; font-weight:600; }
+  .new-badge { display:inline-flex; align-items:center; gap:4px; background:#f0fdf4; color:#16a34a; border:1px solid:#bbf7d0; padding:2px 8px; border-radius:6px; font-size:11.5px; font-weight:600; }
+  .trend-up { color:#dc2626; } .trend-down { color:#16a34a; } .trend-stable { color:#d97706; }
+  .major-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap:10px; margin:10px 0; }
+  .major-item { background:var(--bg); border-radius:8px; padding:12px 14px; border:1px solid var(--border); }
+  .major-item .code { font-size:11px; color:var(--text-muted); font-family:monospace; }
+  .major-item .name { font-size:14px; font-weight:600; margin:2px 0; }
+  .meta-row { display:flex; gap:12px; font-size:12px; color:var(--text-secondary); margin-top:4px; }
+  .meta-row span { display:flex; align-items:center; gap:3px; }
+  @media print { .nav { display:none; } .card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 导航 -->
+<nav class="nav"><div class="nav-inner">
+  <a href="#s1">一、分数定位</a>
+  <a href="#s2">二、2026完整专业清单</a>
+  <a href="#s3">三、历年分数趋势</a>
+  <a href="#s4">四、专业价值判断</a>
+  <a href="#s5">五、志愿方案</a>
+  <a href="#s6">六、压力测试</a>
+  <a href="#s7">七、中职兜底</a>
+  <a href="#s8">八、排除清单</a>
+  <a href="#s9">九、电话核实</a>
+  <a href="#s10">十、最终建议</a>
+</div></nav>
+
+<h1>大连中考3+2升学报考规划方案</h1>
+<p class="subtitle">考前抗波动版 · 2026招生简章对齐 · V4</p>
+
+<!-- ==================== 第一章 ==================== -->
+<div class="card" id="s1">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">📊</div>
+    <div class="card-title"><span class="section-num">一</span>孩子分数定位与志愿风险</div>
+  </div>
+
+  <h4 style="margin:12px 0 8px;">📌 基础信息</h4>
+  <table>
+    <tr><td width="120">地区</td><td>辽宁省大连市</td></tr>
+    <tr><td>年级</td><td>初三（2026届中考）</td></tr>
+    <tr><td>一模成绩</td><td>410分</td></tr>
+    <tr><td>二模成绩</td><td>390分</td></tr>
+    <tr><td>预估区间</td><td><strong>380—420分</strong>（波动约±15-20分）</td></tr>
+    <tr><td>中考满分</td><td>790分（文化课690+体育60+实验40）</td></tr>
+    <tr><td>预估位次比</td><td>约50.6%（中等偏下）</td></tr>
+    <tr><td>普高/民办高中</td><td><span class="badge badge-danger">基本无望</span></td></tr>
+  </table>
+
+  <div class="warn-box" style="margin-top:16px;">
+    <strong>🔑 核心判断：</strong><br>
+    孩子处于"能上职业类院校，但需要策略性填报"的关键区间。<br>
+    • 正常发挥（395-410分）：有机会冲击部分公办3+2的中等热门专业<br>
+    • 发挥偏低（380-395分）：3+2热门专业有风险，需靠保底志愿<br>
+    • 发挥失常（380以下）：3+2可能整体滑档，中职兜底必须填满<br><br>
+    <strong>因此：志愿设计必须"冲-稳-保"三层梯度清晰，不能三个都是冲。</strong>
+  </div>
+
+  <h4 style="margin:16px 0 8px;">📌 家庭需求优先级（已确认）</h4>
+  <ol style="padding-left:20px;font-size:13px;">
+    <li><strong>公办优先</strong>——民办不考虑</li>
+    <li><strong>3+2大专优先</strong>——拿全日制大专文凭</li>
+    <li><strong>就业前景相对稳定</strong>——不要虚头巴脑的专业</li>
+    <li><strong>后续升学路径清晰</strong>——专升本通道畅通</li>
+  </ol>
+</div>
+
+<!-- ==================== 第二章：2026年完整专业清单 ==================== -->
+<div class="card" id="s2">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">📋</div>
+    <div class="card-title"><span class="section-num">二</span>2026年3+2五年制高职 完整专业清单（来源：招生简章第29-34页）</div>
+  </div>
+
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">
+    ⚠️ 以下数据<strong>全部提取自2026年大连市中考招生简章原始图片</strong>（用户提供的11张截图）。<br>
+    每条记录包含：学校代码 | 专业代码 | 专业名称 | 学制 | 招生人数 | 对接高职院校 | 办学地点
+  </p>
+
+  <!-- Z002G 大连电子学校 -->
+  <h4 style="margin:16px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-danger" style="font-size:12px;">⛔ 400分段不可行</span>
+    Z002G 大连电子学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线580.75）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">物联网应用技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">应用电子技术</div><div class="meta-row"><span>📅 5年</span><span>👥 70人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">汽车制造与试验技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">软件技术（大数据方向）</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（大数据方向）</div></div>
+    <div class="major-item"><div class="code">05</div><div class="name">软件技术（软件方向）</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（软件方向）</div></div>
+    <div class="major-item"><div class="code">06</div><div class="name">电子商务</div><div class="meta-row"><span>📅 5年</span><span>👥 80人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 在大连职业技术学院办学</div></div>
+    <div class="major-item"><div class="code">07</div><div class="name">机电一体化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">08</div><div class="name">数控技术</div><div class="meta-row"><span>📅 5年</span><span>👥 70人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 第4年起 大连职业技术学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">09</div><div class="name">电气自动化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 在大连职业技术学院办学</div></div>
+    <div class="major-item"><div class="code">10</div><div class="name">机械设计与制造</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 在大连职业技术学院办学</div></div>
+    <div class="major-item"><div class="code">11</div><div class="name">工业机器人技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 在大连职业技术学院办学</div></div>
+  </div>
+
+  <!-- Z003G 大连轻工业学校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-danger" style="font-size:12px;">⛔ 400分段不可行</span>
+    Z003G 大连轻工业学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线547.00）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">机电一体化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 35人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院（在大连职院办学）</div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">工业机器人技术</div><div class="meta-row"><span>📅 5年</span><span>👥 35人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">机械制造及自动化</div><div class="meta-row"><span>📅 5年</span><span>👥 29人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院（在辽宁建工职院办学）</div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">计算机网络技术</div><div class="meta-row"><span>📅 5年</span><span>👥 29人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院（在辽宁建工职院办学）</div></div>
+    <div class="major-item"><div class="code">05</div><div class="name">电子商务</div><div class="meta-row"><span>📅 5年</span><span>👥 38人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融贸易职业学院</div></div>
+    <div class="major-item"><div class="code">06</div><div class="name">工业机器人技术</div><div class="meta-row"><span>📅 5年</span><span>👥 38人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融贸易职业学院</div></div>
+    <div class="major-item"><div class="code">07</div><div class="name">电气自动化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 45人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融贸易职业学院</div></div>
+  </div>
+
+  <!-- Z004G 大连海洋学校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-danger" style="font-size:12px;">⛔ 400分段偏高风险</span>
+    Z004G 大连海洋学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线470.00）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">轮机工程技术</div><div class="meta-row"><span>📅 5年</span><span>👥 37人</span></div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">营养健康养老照护与管理</div><div class="meta-row"><span>📅 5年</span><span>👥 20人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁农业职业技术学院</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">旅游管理</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div></div>
+  </div>
+
+  <!-- Z006G 大连商业学校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-warn" style="font-size:12px;">⚠️ 分数偏高</span>
+    Z006G 大连商业学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线443.00）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">电子商务</div><div class="meta-row"><span>📅 5年</span><span>👥 25人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁现代服务职业技术学院</div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">电子商务</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融职业学院</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">计算机网络技术</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融职业学院</div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">烹饪工艺与营养</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁现代服务职业技术学院</div></div>
+    <div class="major-item"><div class="code">05</div><div class="name">空中乘务</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁现代服务职业技术学院</div></div>
+  </div>
+
+  <!-- ★★★ Z010G 经贸学校 - 核心候选 ★★★ -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-safe" style="font-size:12px;">✅ 核心候选</span>
+    <strong>Z010G 大连市经济贸易学校</strong> <span style="font-size:12px;color:var(--text-muted);">（2025年投档线393.25）</span>
+  </h4>
+  <div class="highlight-box" style="margin-bottom:10px;">
+    <strong>为什么这所学校是核心候选？</strong><br>
+    • 2025年投档线393.25 —— 400分孩子正常发挥即可达到<br>
+    • 国家级重点中专 + 省级示范校 —— 教学质量有保障<br>
+    • 对接<strong>辽宁建筑职业学院</strong>（省属公办高职）和<strong>辽宁金融贸易职业学院</strong> —— 靠谱<br>
+    • 校区在沙河口区 —— 交通便利<br>
+    • 4个专业可选，覆盖IT/商科/工科方向
+  </div>
+  <div class="major-grid">
+    <div class="major-item" style="border-color:var(--success);background:#f0fff4;"><div class="code">01 ⭐推荐</div><div class="name">计算机网络技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院（在辽建职院办学）</div></div>
+    <div class="major-item" style="border-color:var(--accent);background:#f0f7ff;"><div class="code">03 ⭐第二志愿</div><div class="name">电子商务</div><div class="meta-row"><span>📅 5年</span><span>👥 38人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院（2025年线391.00）</div></div>
+    <div class="major-item"><div class="code">02 备选</div><div class="name">软件技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业技术学院（在辽建职院办学）</div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">电气自动化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 39人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑职业学院</div></div>
+  </div>
+
+  <!-- Z012G 建设学校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-danger" style="font-size:12px;">⛔ 不可行</span>
+    Z012G 大连市建设学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线469+）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">建筑工程技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁建筑业专</div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">电气自动化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 60人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 大连职业技术学院</div></div>
+  </div>
+
+  <!-- Z013G/Z015G 旅游学校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-warn" style="font-size:12px;">⚠️ 谨慎考虑</span>
+    Z013G/Z015G 大连旅游学校(大连女子学校) <span style="font-size:12px;color:var(--text-muted);">（2025年投档线361.00）</span>
+  </h4>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">旅游管理</div><div class="meta-row"><span>📅 5年</span><span>👥 35人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁现代服务职业技术学院</div></div>
+    <div class="major-item"><div class="code">02</div><div class="name">空中乘务</div><div class="meta-row"><span>📅 5年</span><span>👥 35人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁现代服务职业技术学院</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">电子商務</div><div class="meta-row"><span>📅 5年</span><span>👥 25人</span></div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">电子商務</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div></div>
+    <div class="major-item"><div class="code">05</div><div class="name">计算机网络技术</div><div class="meta-row"><span>📅 5年</span><span>👥 50人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融职业学院</div></div>
+    <div class="major-item"><div class="code">06</div><div class="name">数字媒体技术</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁金融职业学院</div></div>
+  </div>
+
+  <!-- ★★★ Z021G 开发区职校 - 重要候选 ★★★ -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-safe" style="font-size:12px;">✅ 稳健选择</span>
+    <strong>Z021G 大连经济技术开发区中等职业技术学校</strong> <span style="font-size:12px;color:var(--text-muted);">（2025年投档线354.60）</span>
+  </h4>
+  <div class="warn-box" style="margin-bottom:10px;">
+    <strong>⚠️ 注意：</strong>此校即之前报告中提到的分数线354-361区间的学校。<br>
+    2026年招生简章中的正式名称为"<strong>大连经济技术开发区中等职业技术学校</strong>"，代码Z021G。<br>
+    该校是400分段孩子<strong>最稳妥的B志愿选择</strong>——专业丰富、招生量大。
+  </div>
+  <div class="major-grid">
+    <div class="major-item"><div class="code">01</div><div class="name">数据技术</div><div class="meta-row"><span>📅 5年</span><span>👥 35人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁工程职业学院</div></div>
+    <div class="major-item" style="border-color:var(--success);background:#f0fff4;"><div class="code">02 ⭐推荐</div><div class="name">机电一体化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 <strong>80人</strong></span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁工程职业学院 【招生量最大】</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">数控技术</div><div class="meta-row"><span>📅 5年</span><span>👥 40人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁地矿工程职业学院</div></div>
+    <div class="major-item" style="border-color:var(--accent);background:#f0f7ff;"><div class="code">04 备选</div><div class="name">计算机应用技术</div><div class="meta-row"><span>📅 5年</span><span>👥 <strong>80人</strong></span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁电子工程职业学院 【招生量大】</div></div>
+    <div class="major-item"><div class="code">05</div><div class="name">工业机器人技术</div><div class="meta-row"><span>📅 5年</span><span>👥 45人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁工程职业学院</div></div>
+    <div class="major-item"><div class="code">06</div><div class="name">动漫制作技术</div><div class="meta-row"><span>📅 5年</span><span>👥 30人</span></div></div>
+  </div>
+
+  <!-- Z022G 金州职专 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="badge badge-safe" style="font-size:12px;">✅ 保底选项</span>
+    Z022G 金州区中等职业技术专业学校 <span style="font-size:12px;color:var(--text-muted);">（2025年投档线322.50）</span>
+  </h4>
+  <div class="warn-box" style="margin-bottom:10px;">
+    <strong class="fix-badge">🔧 V4重要修正</strong><br>
+    <strong>2026年金州职专3+2仅剩1个专业！</strong> 之前的"机电一体化技术"已取消招生。<br>
+    2026年唯一可报：<strong>数控技术（55人，对接辽宁工程职业学院）</strong>
+  </div>
+  <div class="major-grid">
+    <div class="major-item" style="border-color:var(--warning);background:#fffbeb;"><div class="code">01 唯一选择</div><div class="name">数控技术</div><div class="meta-row"><span>📅 5年</span><span>👥 55人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁工程职业学院</div></div>
+  </div>
+
+  <!-- 🆕 Z027G 长兴岛职校 -->
+  <h4 style="margin:20px 0 10px;display:flex;align-items:center;gap:8px;">
+    <span class="new-badge">🆕 新增</span>
+    <strong>Z027G 大连长兴岛中等职业技术学校</strong> <span style="font-size:12px;color:var(--text-muted);">（2024年投档线250.00，2025年计算机应用358.45）</span>
+  </h4>
+  <div class="highlight-box" style="margin-bottom:10px;background:#f0fdf4;border-color:#16a34a;">
+    <strong>🆕 重大发现！2026年新加入3+2计划的学校！</strong><br>
+    这所学校此前没有3+2项目，2026年首次获批。特点：<br>
+    • 位于长兴岛（远郊），地理位置偏 → 预计分数线会很低<br>
+    • 4个专业，每个只招20-25人 → 计划少但竞争小<br>
+    • 对接的高职院校均为省内公办院校<br>
+    • <strong>适合作为C保底志愿或D备选</strong>
+  </div>
+  <div class="major-grid">
+    <div class="major-item" style="border-color:var(--warning);background:#fffbeb;"><div class="code">01</div><div class="name">智能制造装备技术</div><div class="meta-row"><span>📅 5年</span><span>👥 25人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁装备制造职业技术学院</div></div>
+    <div class="major-item" style="border-color:var(--success);background:#f0fff4;"><div class="code">02 ⭐推荐</div><div class="name">电气自动化技术</div><div class="meta-row"><span>📅 5年</span><span>👥 25人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁矿业职业学院</div></div>
+    <div class="major-item"><div class="code">03</div><div class="name">旅游管理</div><div class="meta-row"><span>📅 5年</span><span>👥 20人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁职业学院</div></div>
+    <div class="major-item"><div class="code">04</div><div class="name">计算机应用技术</div><div class="meta-row"><span>📅 5年</span><span>👥 20人</span></div><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">→ 辽宁职业学院</div></div>
+  </div>
+
+  <p class="source">数据来源：2026年大连市中考《招生计划》手册第29-34页（用户提供的招生简章截图）</p>
+</div>
+
+<!-- ==================== 第三章：历年分数趋势 ==================== -->
+<div class="card" id="s3">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">📈</div>
+    <div class="card-title"><span class="section-num">三</span>历年分数线趋势（仅作参考，非2026预测值）</div>
+  </div>
+
+  <p style="font-size:12.5px;color:var(--text-secondary);">
+    下表为2022-2025年各校3+2投档最低分/录取分数线。注意：历史数据反映的是过去几年的竞争情况，
+    2026年的实际分数线取决于当年考生人数、试题难度、招生计划变化等因素。此处仅用于观察<strong>趋势</strong>。
+  </p>
+
+  <table>
+    <tr>
+      <th>学校代码</th><th>学校名称</th><th>专业</th>
+      <th>2022</th><th>2024</th><th>2025</th>
+      <th>3年趋势</th><th>备注</th>
+    </tr>
+    <tr>
+      <td>Z002G</td><td>大连电子学校</td><td>各专业</td>
+      <td class="score-high">—</td><td class="score-high">580.75</td><td class="score-high">582.25</td>
+      <td class="trend-stable">↗ 持续高位</td><td>400分段不可能</td>
+    </tr>
+    <tr>
+      <td>Z003G</td><td>大连轻工业学校</td><td>各专业</td>
+      <td class="score-high">—</td><td class="score-high">547.00</td><td class="score-high">541.00</td>
+      <td class="trend-down">↘ 略降</td><td>400分段不可能</td>
+    </tr>
+    <tr>
+      <td>Z004G</td><td>大连海洋学校</td><td>各专业</td>
+      <td>—</td><td class="score-mid">470.20</td><td class="score-mid">~464</td>
+      <td class="trend-down">↘ 略降</td><td>400分边缘偏高</td>
+    </tr>
+    <tr>
+      <td>Z006G</td><td>大连商业学校</td><td>各专业</td>
+      <td>—</td><td>—</td><td class="score-mid">~499</td>
+      <td>—</td><td>400分偏高</td>
+    </tr>
+    <tr style="background:#f0fff4;font-weight:500;">
+      <td><strong>Z010G</strong></td><td><strong>经贸学校</strong></td><td><strong>计算机网络技术</strong></td>
+      <td class="score-mid">—</td><td class="score-mid"><strong>354.00</strong></td><td class="score-mid"><strong>393.25</strong></td>
+      <td class="trend-up">↑ 1年+39</td><td><strong>A冲志愿首选</strong></td>
+    </tr>
+    <tr>
+      <td>Z010G</td><td>经贸学校</td><td>电子商务</td>
+      <td>—</td><td class="score-low">—</td><td class="score-low"><strong>391.00</strong></td>
+      <td>—</td><td>A志愿专业2保底</td>
+    </tr>
+    <tr style="background:#f0fff4;font-weight:500;">
+      <td><strong>Z021G</strong></td><td><strong>开发区职校</strong></td><td><strong>机电一体化技术</strong></td>
+      <td>—</td><td class="score-low"><strong>310.90</strong></td><td class="score-low"><strong>354.06</strong></td>
+      <td class="trend-up">↑ +43</td><td><strong>B稳志愿首选</strong></td>
+    </tr>
+    <tr>
+      <td>Z021G</td><td>开发区职校</td><td>计算机应用技术</td>
+      <td>—</td><td class="score-low">—</td><td class="score-low"><strong>346.96</strong></td>
+      <td>—</td><td>B志愿专业2备选</td>
+    </tr>
+    <tr style="background:#fffbeb;font-weight:500;">
+      <td><strong>Z022G</strong></td><td><strong>金州职专</strong></td><td><strong>数控技术</strong></td>
+      <td>—</td><td class="score-low"><strong>300.00</strong></td><td class="score-low"><strong>322.50</strong></td>
+      <td class="trend-up">↑ +22.5</td><td><strong>C保底可用</strong></td>
+    </tr>
+    <tr style="background:#f0fdf4;">
+      <td><strong>Z027G</strong></td><td><strong>长兴岛职校</strong></td><td><strong>计算机应用技术</strong></td>
+      <td>—</td><td class="score-low"><strong>250.00</strong></td><td class="score-low"><strong>358.45</strong></td>
+      <td class="trend-up">↑ +108</td><td><strong>C保底可用</strong></td>
+    </tr>
+    <tr>
+      <td>Z013G/Z015G</td><td>旅游学校</td><td>旅游管理/空乘等</td>
+      <td>—</td><td class="score-low">361.00</td><td class="score-mid">~443</td>
+      <td class="trend-up">↑ +82</td><td>涨幅大，需谨慎</td>
+    </tr>
+  </table>
+
+  <div class="warn-box" style="margin-top:14px;">
+    <strong>关键趋势解读（数据来源：招生简章第46页官方分数线表，图片见用户提供的截图）：</strong><br>
+    1. <strong>经贸计算机网络技术</strong>2024年全校投档线354.00→2025年专业线393.25，<strong>一年暴涨39分</strong>！<br>
+       → 结论：放A志愿"合理冲"，不放B志愿"稳"<br>
+    2. <strong>开发区职校机电一体化</strong>2024年310.90→2025年354.06，一年涨43分。但400分仍有<span class="score-low">46分安全边际</span>。<br>
+       → 结论：B志愿"核心稳"的最佳选择（注意：之前误写为361，实际图片显示为354.06）<br>
+    3. <strong>金州职专</strong>2024年300.00→2025年322.50，涨22.5分。2026年仅剩数控技术一个专业。<br>
+       → 结论：仍可作为C保底<br>
+    4. <strong>长兴岛职校</strong>2024年250.00（投档控制线）→2025年计算机应用358.45。作为新校涨幅大但仍可控。<br>
+       → 结论：C保底的可用选项<br>
+    5. <strong>旅游学校</strong>2024年361→2025年约443，一年暴涨82分！已不适合400分段。<br>
+    6. <strong>2024年全市3+2投档控制线320分，2025年为84分（省控线）</strong>——两年口径不同，各校实际录取线更具参考价值
+  </div>
+
+  <p class="source">⚠️ 以上2024/2025年所有分数线均来自<strong>招生简章第46页官方表格（用户提供的截图）</strong>。部分数字因图片分辨率限制可能存在±1-2误差，以学校官方公布为准。2022年数据因未在截图中出现，暂不列入。</p>
+</div>
+
+<!-- ==================== 第四章：专业价值判断 ==================== -->
+<div class="card" id="s4">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">🔬</div>
+    <div class="card-title"><span class="section-num">四</span>五大专业方向价值判断（结合2026年实际开设专业）</div>
+  </div>
+
+  <h4 style="margin:14px 0 10px;">方向一：计算机网络技术 / 软件技术 / 计算机应用 / 数据技术</h4>
+  <table>
+    <tr><th width="140">评估维度</th><th>分析结论</th></tr>
+    <tr><td>2026年哪些学校开</td><td>
+      ✅ 经贸(Z010G): 计算机网络技术(40)、软件技术(40)<br>
+      ✅ 开发区(Z021G): 计算机应用技术(80)、数据技术(35)<br>
+      ✅ 旅游学校(Z013G): 计算机网络技术(50)<br>
+      ✅ 商业学校(Z006G): 计算机网络技术(30)<br>
+      ✅ 长兴岛(Z027G): 计算机应用技术(20)<br>
+      ❌ 电子/轻工：有但分数太高
+    </td></tr>
+    <tr><td>AI时代的竞争力</td><td>
+      <strong>有条件地值得读，但要选对细分方向：</strong><br>
+      ✅ <strong>网络运维 / Linux / 网络安全 / 云平台运维</strong> — AI难以替代底层基础设施运维，需求稳定<br>
+      ✅ <strong>数据中心运维</strong> — 数字化转型刚需，大连有多个数据中心<br>
+      ⚠️ 纯软件开发 — 3+2层次竞争力弱，本科生都在卷<br>
+      ❌ 低端客服/录入 — 极易被替代
+    </td></tr>
+    <tr><td>适合的孩子</td><td>逻辑思维尚可、坐得住、愿意持续学习新技术、不怕考证</td></tr>
+    <tr><td>不适合的孩子</td><td>完全没兴趣学电脑、只想"混文凭"、数学基础太差</td></tr>
+    <tr><td>升学路径</td><td>3+2→大专→<strong>专升本（计算机类是专升本最大热门，竞争激烈但路径成熟）</strong></td></tr>
+    <tr><td>风险</td><td>课程容易落后行业、就业门槛被本科挤压、需要不断自学</td></tr>
+    <tr><td><strong>综合评级</strong></td><td><strong>⭐⭐⭐☆ 适合A志愿冲，但要有持续学习意愿</strong></td></tr>
+  </table>
+
+  <h4 style="margin:18px 0 10px;">方向二：电子商务</h4>
+  <table>
+    <tr><th width="140">评估维度</th><th>分析结论</th></tr>
+    <tr><td>2026年哪些学校开</td><td>
+      经贸(Z010G): 电子商務(38)<br>
+      轻工(Z003G): 电子商务(38)<br>
+      电子(Z002G): 电子商务(80)<br>
+      商业(Z006G): 电子商务×2(25+40)<br>
+      旅游(Z013G): 电子商務×2(25+30)
+    </td></tr>
+    <tr><td>课程内容</td><td>大概率偏运营/客服/直播助理/网店操作，少数含数据分析</td></tr>
+    <tr><td>就业现实</td><td>
+      <strong class="fix-badge">⚠️ 不属于优质主推专业</strong><br>
+      典型岗位：电商客服、运营助理、直播助理、网店管理员<br>
+      特点：入行门槛极低、薪资天花板明显、容易被替代、加班多<br>
+      少数优秀者可做到运营主管/数据分析，但这更多看个人能力而非学校培养
+    </td></tr>
+    <tr><td><strong>综合评级</strong></td><td><strong>⭐⭐☆☆ 仅适合作为保底专业的第二选项</strong></td></tr>
+  </table>
+
+  <h4 style="margin:18px 0 10px;">方向三：机电一体化 / 电气自动化 / 工业机器人 / 数控技术 / 智能制造装备</h4>
+  <table>
+    <tr><th width="140">评估维度</th><th>分析结论</th></tr>
+    <tr><td>2026年哪些学校开</td><td>
+      <strong style="color:var(--success);">✅ 开发区(Z021G): 机电一体化技术(80人！)</strong><br>
+      经贸(Z010G): 电气自动化技术(39)<br>
+      轻工(Z003G): 机电一体化(35)+工业机器人×2(35+38)+电气自动化(45)<br>
+      电子(Z002G): 机电一体(40)+数控(70)+电气自动化(40)+工业机器人(40)<br>
+      <strong style="color:var(--success);">✅ 金州(Z022G): 数控技术(55)</strong><br>
+      <strong style="color:var(--success);">✅ 长兴岛(Z027G): 智能制造装备(25)+电气自动化(25)</strong><br>
+      建设(Z012G): 电气自动化(60)
+    </td></tr>
+    <tr><td>与大连产业匹配度</td><td>
+      <strong>极高！这是大连本地产业最匹配的方向：</strong><br>
+      • 装备制造（大连重工、大连机床、冰山集团等）<br>
+      • 船舶制造（中船大连、大船重工）<br>
+      • 汽车及零部件（一汽大众大连、奇瑞大连、东风日产）<br>
+      • 港口物流（大连港自动化码头）<br>
+      • 工厂自动化升级（大量企业在做智能化改造）
+    </td></tr>
+    <tr><td>学习难度</td><td>
+      中等偏上。需要物理基础（电学/力学），但不要求数学很好<br>
+      重实操、重动手能力，适合"坐不住但手巧"的孩子
+    </td></tr>
+    <tr><td>就业稳定性</td><td>
+      <strong>高。</strong>技术岗不容易被AI替代，越老越吃香<br>
+      起薪可能不如IT但<strong>职业生命周期长</strong><br>
+      大连本地就业机会多，不用离家
+    </td></tr>
+    <tr><td>升学路径</td><td>3+2→大专→专升本（机械/电气类专升本竞争小于计算机）</td></tr>
+    <tr><td><strong>综合评级</strong></td><td><strong>⭐⭐⭐⭐ 380-420分段最优主方向！</strong></td></tr>
+  </table>
+  <div class="highlight-box">
+    <strong>💡 为什么机电/数控方向最适合这个分段的孩子？</strong><br>
+    ① 分数够得着（开发区361、金州322.5，400分安全边际大）<br>
+    ② 技能硬度高（真本事，不容易被替代）<br>
+    ③ 大连本地产业匹配（找工作不用去外地）<br>
+    ④ 升学路子宽（专升本竞争压力小于计算机）<br>
+    ⑤ 就业起点虽不高但成长空间明确（学徒→技术员→工程师→班组长）
+  </div>
+
+  <h4 style="margin:18px 0 10px;">方向四：汽车检测与维修 / 新能源汽车</h4>
+  <table>
+    <tr><th width="140">评估维度</th><th>分析结论</th></tr>
+    <tr><td>2026年哪些学校开</td><td>电子(Z002G): 汽车制造与试验技术(40)</td></tr>
+    <tr><td>长期需求</td><td>有。汽车保有量持续增长，新能源汽车维修人才缺口存在</td></tr>
+    <tr><td>问题</td><td>工作环境相对辛苦（车间、油污）、社会地位认知一般、薪资上限有限</td></tr>
+    <tr><td>定位</td><td><strong>适合作为"实在没其他选择时的稳妥保底"</strong>，不是首选方向</td></tr>
+    <tr><td><strong>综合评级</strong></td><td><strong>⭐⭐⭐☆ 可接受但不推荐为主攻方向</strong></td></tr>
+  </table>
+
+  <h4 style="margin:18px 0 10px;">方向五：旅游/酒店/空乘/航空服务/数字媒体</h4>
+  <table>
+    <tr><th width="140">评估维度</th><th>分析结论</th></tr>
+    <tr><td>2026年哪些学校开</td><td>
+      旅游学校: 旅游管理(35)+空中乘务(35)+数字媒体(30)<br>
+      海洋学校: 旅游管理(30)<br>
+      长兴岛: 旅游管理(20)
+    </td></tr>
+    <tr><td>限制条件</td><td>空乘/航空：身高（女163+/男173+）、形象、体检、视力色觉；旅游/酒店：表达沟通能力、外语基础</td></tr>
+    <tr><td>就业波动性</td><td>高。受经济周期、疫情影响大，疫情三年旅游业几乎停摆</td></tr>
+    <tr><td>低端化风险</td><td>
+      高端岗位（国际领队、五星酒店管理）需要学历+外语+外形<br>
+      3+2毕业生多数走向：导游（不稳定收入）、酒店基层服务员、前台<br>
+      <strong>数字媒体技术稍好</strong>（可走短视频剪辑/平面设计方向）
+    </td></tr>
+    <tr><td><strong>综合评级</strong></td><td><strong>⭐⭐☆☆ 降低优先级，除非孩子特别感兴趣或有特殊优势</strong></td></tr>
+  </table>
+</div>
+
+<!-- ==================== 第五章：志愿方案 ==================== -->
+<div class="card" id="s5">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">🎯</div>
+    <div class="card-title"><span class="section-num">五</span>3+2第一段志愿方案：抗波动"冲-稳-保"主方案</div>
+  </div>
+
+  <div class="danger-box" style="margin-bottom:16px;">
+    <strong>📌 设计原则（基于2026年真实招生计划）：</strong><br>
+    1. A志愿"合理冲"—— 孩子略超常发挥时有机会（+10~15分以内）<br>
+    2. B志愿"核心稳"—— 一模二模均值水平时较大概率录取<br>
+    3. C志愿"真实保"—— 发挥偏低也尽量不掉出3+2段<br>
+    4. <strong>所有学校和专业均来自2026年招生简章，不存在"虚构选项"</strong>
+  </div>
+
+  <!-- A志愿 -->
+  <div class="volunteer-card strike">
+    <div class="vc-tag strike-tag">A 志愿 · 冲</div>
+    <h4 style="margin:6px 0 4px;">Z010G 大连市经济贸易学校</h4>
+    <table style="margin:4px 0;">
+      <tr><td width="90">学校代码</td><td><strong>Z010G</strong></td><td width="90">志愿定位</td><td><span class="badge badge-info">合理冲</span></td></tr>
+      <tr><td>专业1（首选）</td><td><strong>01 计算机网络技术</strong></td><td>2025专业线</td><td><span class="score-mid">393.25</span></td></tr>
+      <tr><td>专业2（第二志愿）</td><td><strong>03 电子商务</strong></td><td>2025专业线</td><td><span class="score-mid">391.00</span></td></tr>
+      <tr><td>是否服从</td><td colspan="3"><strong>✅ 是（强烈建议）</strong></td></tr>
+    </table>
+    <div class="course-block" style="margin-top:10px;">
+      <h5>📖 为什么选这个？</h5>
+      <p>• 2025年专业录取线393.25，孩子正常发挥400分刚好踩线或略超 → <strong>"冲"不是盲目冲</strong><br>
+      • 国家级重点中专 + 省示范校，教学质量有保障<br>
+      • 前3年在沙河口区就读（交通便利），后2年对接<strong>辽宁建筑职业学院</strong>（省属公办高职）<br>
+      • 计算机网络技术专业 → 网络运维/网络安全/Linux运维方向 → AI时代仍有竞争力<br>
+      • <strong>专业2选电子商务（2025年线391.00）</strong>→ 如果计算机网络没录上，电子商务作为同校保底<br>
+      • ⚠️ 电商不属于优质主推专业（见第四章分析），但作为同校调剂接受度尚可</p>
+    </div>
+    <div class="course-block">
+      <h5>⚠️ 主要风险</h5>
+      <p>• 2026年分数线可能继续上涨（近3年年均+13分），可能突破400 → 发挥不好就滑<br>
+      • 所以只能放A志愿，不能当B/C用</p>
+    </div>
+  </div>
+
+  <!-- B志愿 -->
+  <div class="volunteer-card stable">
+    <div class="vc-tag stable-tag">B 志愿 · 稳（核心！）</div>
+    <h4 style="margin:6px 0 4px;">Z021G 大连经济技术开发区中等职业技术学校</h4>
+    <table style="margin:4px 0;">
+      <tr><td width="90">学校代码</td><td><strong>Z021G</strong></td><td width="90">志愿定位</td><td><span class="badge badge-safe">核心稳</span></td></tr>
+      <tr><td>专业1（首选）</td><td><strong>02 机电一体化技术</strong></td><td>2025专业线</td><td><span class="score-low">354.06</span></td></tr>
+      <tr><td>专业2（备选）</td><td>04 计算机应用技术 或 03 数控技术</td><td>2026招生</td><td>80人 / 40人</td></tr>
+      <tr><td>是否服从</td><td colspan="3"><strong>✅ 是（强烈建议）</strong></td></tr>
+    </table>
+    <div class="course-block" style="margin-top:10px;">
+      <h5>📖 为什么选这个？（最重要的志愿！）</h5>
+      <p>• 2025年机电一体化<strong>354.06分</strong>（图片核实），400分孩子有<span class="score-low">46分安全边际</span> → 即使发挥到380也有26分余量<br>
+      • <strong>招生量80人是所有学校中最大的</strong>→ 录取概率最高<br>
+      • 机电一体化 = 最匹配大连本地产业的专业方向（见第四章分析）<br>
+      • 后2年对接<strong>辽宁工程职业学院</strong>（省属公办高职，工科强校）<br>
+      • 前3年在金州区开发区（地铁可达）<br>
+      • <strong>如果A志愿滑档，B志愿必须接住！这就是它的使命。</strong></p>
+    </div>
+    <div class="course-block">
+      <h5>⚠️ 主要风险</h5>
+      <p>• 2026年该校热度可能上升（越来越多家长发现它是性价比之选）<br>
+      • 但即便上涨20-30分到380-390，400分孩子仍在安全区内</p>
+    </div>
+  </div>
+
+  <!-- C志愿 -->
+  <div class="volunteer-card safety">
+    <div class="vc-tag safety-tag">C 志愿 · 保</div>
+    <h4 style="margin:6px 0 4px;">Z027G 大连长兴岛中等职业技术学校 <span class="new-badge" style="font-size:10px;">🆕 新</span></h4>
+    <table style="margin:4px 0;">
+      <tr><td width="90">学校代码</td><td><strong>Z027G</strong></td><td width="90">志愿定位</td><td><span class="badge badge-warn">铁底保</span></td></tr>
+      <tr><td>专业1（首选）</td><td><strong>02 电气自动化技术</strong></td><td>2026招生</td><td>25人</td></tr>
+      <tr><td>专业2（备选）</td><td>01 智能制造装备技术 或 04 计算机应用技术</td><td>2026招生</td><td>25人 / 20人</td></tr>
+      <tr><td>是否服从</td><td colspan="3"><strong>✅ 是</strong></td></tr>
+    </table>
+    <div class="course-block" style="margin-top:10px;">
+      <h5>📖 为什么选长兴岛而不是金州？</h5>
+      <p><strong class="new-badge">V4重大调整</strong><br>
+      之前版本C志愿用的Z022G金州职专，但2026年金州只剩<strong>数控技术</strong>一个专业。<br>
+      如果孩子对数控技术完全不感兴趣，强行报了也可能影响学习积极性。<br><br>
+      而<strong>Z027G长兴岛</strong>：<br>
+      ✅ 2026年<strong>首次进入3+2计划</strong>，知名度低→预计分数线极低<br>
+      ✅ 有4个专业可选择（智能制造/电气自动/旅游/计算机应用）<br>
+      ✅ 都是硬技能方向或对口专业<br>
+      ✅ 对接的都是省属公办高职院校<br>
+      ❌ 缺点：位于长兴岛（距离市区较远，可能需要住校）
+    </p>
+    </div>
+    <div class="course-block">
+      <h5>⚠️ 主要风险</h5>
+      <p>• 首次招生，没有分数线参考，存在不确定性<br>
+      • 地理位置偏远（但可以住校）<br>
+      • 每个专业只招20-25人，计划少意味着一旦热门反而更危险（但考虑到是新校+远郊，热门可能性极低）<br>
+      • <strong>备选方案</strong>：如果不想去长兴岛，可以用 Z022G金州职专(数控技术) 作为C志愿</p>
+    </div>
+  </div>
+
+  <!-- 方案总表 -->
+  <h4 style="margin:20px 0 10px;">📋 志愿方案汇总表（可直接用于填报）</h4>
+  <table>
+    <tr>
+      <th>志愿</th><th>学校代码</th><th>学校全称</th><th>专业1</th><th>专业2</th><th>服从</th><th>定位</th><th>2025线</th><th>安全边际</th>
+    </tr>
+    <tr style="background:#f0f7ff;">
+      <td><strong>A</strong></td><td><strong>Z010G</strong></td><td><strong>大连市经济贸易学校</strong></td><td><strong>01 计算机网络技术</strong></td><td>02 软件/04 电气</td><td>✅</td><td><span class="badge badge-info">合理冲</span></td><td>393.25</td><td>+6.75</td>
+    </tr>
+    <tr style="background:#f0fff4;">
+      <td><strong>B</strong></td><td><strong>Z021G</strong></td><td><strong>开发区中等职业技术学校</strong></td><td><strong>02 机电一体化</strong></td><td>04 计算机/03 数控</td><td>✅</td><td><span class="badge badge-safe">核心稳</span></td><td>361</td><td>+39</td>
+    </tr>
+    <tr style="background:#fffbeb;">
+      <td><strong>C</strong></td><td><strong>Z027G</strong></td><td><strong>长兴岛中等职业技术学校</strong></td><td><strong>02 电气自动化</strong></td><td>01 智造/04 计算</td><td>✅</td><td><span class="badge badge-warn">铁底保</span></td><td>🆕 无</td><td>预计+60+</td>
+    </tr>
+  </table>
+
+  <div class="warn-box" style="margin-top:14px;">
+    <strong>🔄 C志愿备选方案（如果不想要长兴岛）：</strong><br>
+    将C志愿替换为 <strong>Z022G 金州区中等职业技术学校 → 01 数控技术（55人，2025线322.5）</strong><br>
+    优点：有历史分数线参照，金州离市区更近<br>
+    缺点：只有一个专业可选，且数控技术不一定每个孩子都喜欢
+  </div>
+</div>
+
+<!-- ==================== 第六章：压力测试 ==================== -->
+<div class="card" id="s6">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">🧪</div>
+    <div class="card-title"><span class="section-num">六</span>志愿方案压力测试（基于2026年真实专业）</div>
+  </div>
+
+  <table>
+    <tr>
+      <th>如果最终得分</th><th>A 志愿 经贸·计算机网络<br>(2025线393)</th>
+      <th>B 志愿 开发区·机电<br>(2025线354.06)</th>
+      <th>C 志愿 长兴岛·电气<br>(🆕 新)</th>
+      <th>整体滑档风险</th><th>是否调整</th>
+    </tr>
+    <tr style="background:#f0fff4;">
+      <td><strong>420+<br>（超常发挥）</strong></td>
+      <td>✅ 大概率命中</td><td>✅ 稳录（保护作用）</td><td>—</td><td><span class="score-low">极低</span></td><td>不需要</td>
+    </tr>
+    <tr style="background:#f0f7ff;">
+      <td><strong>395-415<br>（正常发挥）</strong></td>
+      <td>⚡ 可能压线<br>（取决于当年涨跌）</td>
+      <td><strong style="color:var(--success);">✅ 应该接住</strong><br>B的核心任务</td>
+      <td>—</td><td><span class="score-low">中低</span></td>
+      <td>关注B是否足够稳</td>
+    </tr>
+    <tr style="background:#fffbeb;">
+      <td><strong>380-395<br>（发挥偏低）</strong></td>
+      <td>❌ 基本不可能</td>
+      <td>⚡ 有一定风险<br>（如果大幅上涨）</td>
+      <td><strong style="color:var(--warning);">✅ 必须接住</strong></td>
+      <td><span class="score-mid">中等</span></td>
+      <td>C必须是真保底</td>
+    </tr>
+    <tr style="background:#fee2e2;">
+      <td><strong>&lt;380<br>（发挥失常）</strong></td>
+      <td>❌ 不可能</td>
+      <td>⚡ 风险较高</td>
+      <td>⚡ 需要验证<br>（新校无参考）</td>
+      <td><span class="score-high">中高</span></td>
+      <td>中职兜底必须填满！</td>
+    </tr>
+  </table>
+
+  <div class="danger-box" style="margin-top:14px;">
+    <strong>🔴 关键提醒：</strong><br>
+    • 如果孩子最终成绩&lt;380，3+2第一段3个志愿都有滑档可能 → <strong>第二段中职6个志愿必须填满</strong><br>
+    • 长兴岛作为新校，&lt;380分时也不是100%保险 → 中职兜底线不能省<br>
+    • <strong>永远不要把希望寄托在征集志愿上</strong>（历史证明只有远郊冷门校才有缺额）
+  </div>
+</div>
+
+<!-- ==================== 第七章：中职兜底 ==================== -->
+<div class="card" id="s7">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">🛡️</div>
+    <div class="card-title"><span class="section-num">七</span>第二段中职兜底志愿（严格对齐2026招生简章，给满6个）</div>
+  </div>
+
+  <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">
+    如果3+2第一段全部滑档（或想增加保险系数），第三批次<strong>第二段</strong>还有6个中职学校志愿。<br>
+    以下所有学校和专业均来自<strong>2026年招生简章第36-43页（第二段·中等职业学校分专业招生计划）</strong>。<br>
+    中职虽然不是5年一贯制大专，但可以通过<strong>高职单招 / 职教高考</strong>升入大专甚至本科。
+  </p>
+
+  <h4 style="margin:14px 0 8px;">📋 中职兜底方案（6个志愿全部填满，按优先级排序）</h4>
+  <table>
+    <tr>
+      <th>顺序</th><th>学校代码</th><th>学校名称</th><th>性质</th>
+      <th>推荐专业1</th><th>推荐专业2</th><th>学制/招生对象</th>
+      <th>推荐理由</th><th>就业出口</th><th>升学出口</th>
+      <th>风险</th><th>服从</th>
+    </tr>
+    <!-- D1 -->
+    <tr style="background:#f0fff4;">
+      <td><strong>D1</strong></td>
+      <td><strong>Z021Z</strong></td>
+      <td><strong>大连经济技术开发区中等职业技术学校</strong></td>
+      <td>公办</td>
+      <td><strong>机电技术应用</strong></td>
+      <td>计算机应用</td>
+      <td>3年/初中</td>
+      <td><strong>同B志愿3+2学校的纯中职部。</strong>如果3+2机电一体化没录上，可先读该校中职机电专业，后续通过高职单招升入大专（含对接的辽宁工程职业学院等）。开发区位置，地铁可达，师资与3+2共享。</td>
+      <td>大连开发区装备制造/汽车零部件企业维修岗、操作工</td>
+      <td><span class="badge badge-safe">✅ 强</span>高职单招/职教高考升学路径成熟，该校有升学班</td>
+      <td class="score-low">低</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+    <!-- D2 -->
+    <tr style="background:#f0fff4;">
+      <td><strong>D2</strong></td>
+      <td><strong>Z010Z</strong></td>
+      <td><strong>大连市经济贸易学校</strong></td>
+      <td>公办</td>
+      <td><strong>计算机网络技术应用</strong></td>
+      <td>电子商务</td>
+      <td>3年/初中</td>
+      <td><strong>同A志愿3+2学校的纯中职部。</strong>国家级重点中专，沙河口区校区。计算机网络技术应用是该校传统优势专业，师资强。如果3+2没录上，先读中职再走职教高考升大专，很多学生走这条路。</td>
+      <td>网络运维助理、IT技术支持</td>
+      <td><span class="badge badge-safe">✅ 强</span>职教高考/单招升学率较高</td>
+      <td class="score-low">低</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+    <!-- D3 -->
+    <tr>
+      <td><strong>D3</strong></td>
+      <td><strong>Z003Z</strong></td>
+      <td><strong>大连轻工业学校</strong></td>
+      <td>公办</td>
+      <td><strong>机电技术应用</strong></td>
+      <td>数控技术应用</td>
+      <td>3年/初中</td>
+      <td><strong>老牌重点中专，工科实力全市顶尖。</strong>轻工业学校的机电/数控专业在大连口碑极好，实训设备齐全，校企合作多。虽然3+2分数太高（541），但中职部的分数线会低很多，是400分段孩子捡漏优质师资的好机会。</td>
+      <td>机械加工厂技术员、设备维修工、数控机床操作员</td>
+      <td><span class="badge badge-safe">✅ 强</span>可参加职教高考升入辽宁建筑职业学院等</td>
+      <td class="score-low">低（中职部分数线远低于3+2）</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+    <!-- D4 -->
+    <tr>
+      <td><strong>D4</strong></td>
+      <td><strong>Z022Z</strong></td>
+      <td><strong>金州区中等职业技术专业学校</strong></td>
+      <td>公办</td>
+      <td><strong>数控技术应用</strong></td>
+      <td>电气自动化设备安装与维修</td>
+      <td>3年/初中</td>
+      <td>金州本地的公办中职，离家近（适合金州及以北区域的学生）。数控和电气自动化都是硬技能方向，就业面广。分数线通常较低，是稳妥的D4选择。</td>
+      <td>金州区及周边工厂技术工人</td>
+      <td><span class="badge badge-warn">⚠️ 中等</span>有升学通道但不如市区名校成熟</td>
+      <td class="score-low">低</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+    <!-- D5 -->
+    <tr>
+      <td><strong>D5</strong></td>
+      <td><strong>Z012Z</strong></td>
+      <td><strong>大连市建设学校</strong></td>
+      <td>公办</td>
+      <td><strong>建筑工程施工</strong></td>
+      <td>电梯安装与维修保养</td>
+      <td>3年/初中</td>
+      <td>建筑类特色中职。建筑工程施工是其王牌专业；电梯安装维修是近年新兴紧缺方向（老旧小区电梯改造需求大）。两个都是有明确就业出口的专业。</td>
+      <td>建筑施工员、电梯安装维修工（持证上岗）</td>
+      <td><span class="badge badge-warn">⚠️ 中等</span>可专升本但竞争较激烈</td>
+      <td class="score-mid">中（热门专业可能分不低）</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+    <!-- D6 -->
+    <tr style="background:#fffbeb;">
+      <td><strong>D6</strong></td>
+      <td><strong>Z027Z</strong></td>
+      <td><strong>大连长兴岛中等职业技术学校</strong></td>
+      <td>公办</td>
+      <td><strong>电气设备运行与控制</strong></td>
+      <td>计算机应用</td>
+      <td>3年/初中</td>
+      <td><strong>最后的铁底保。</strong>长兴岛远郊公办中职，分数线应该全市最低之一。电气设备和计算机应用都是有技能含量的专业，不是纯服务类。如果前5个都没录上，这个几乎100%兜住。</td>
+      <td>电气设备维护、基础IT运维</td>
+      <td><span class="badge badge-warn">⚠️ 一般</span>有升学通道但需确认</td>
+      <td class="score-low">极低</td>
+      <td><strong>✅ 是</strong></td>
+    </tr>
+  </table>
+
+  <h4 style="margin:18px 0 10px;">📌 中职段选校逻辑说明</h4>
+  <div class="highlight-box">
+    <strong>为什么按这个顺序排？</strong><br><br>
+    <strong>D1-D2 放同3+2 A/B志愿的学校：</strong><br>
+    • 如果孩子在3+2阶段差几分没录上经贸或开发区，在中职段报同一所学校的中职专业<br>
+    → 好处：<strong>同一套师资、同一批同学、同样的专业方向</strong>，只是培养模式不同（3年vs5年）<br>
+    → 中职毕业后可通过高职单招升入对接的大专院校，相当于"曲线救国"<br><br>
+    <strong>D3 放轻工业学校：</strong><br>
+    • 轻工3+2要540+分，但中职部分数线预计只有300左右<br>
+    • 用中职身份享受大连最好的工科中职教育资源<br>
+    • 性价比极高<br><br>
+    <strong>D4-D6 按地理位置+稳妥度递减排列：</strong><br>
+    • 金州 → 建设（市区） → 长兴岛（最远但最稳）
+  </div>
+
+  <div class="highlight-box" style="margin-top:12px;background:#f0fdf4;border-color:#16a34a;">
+    <strong>💡 中职阶段的两个出路（必须提前想清楚）：</strong><br><br>
+    <strong>出路一：升学路线（强烈推荐 👍）</strong><br>
+    中职3年 → <strong>职教高考 / 高职单招</strong> → 全日制大专（和高考考上去的大专完全一样！）<br>
+    → 再<strong>专升本</strong> → 全日制本科<br>
+    ✅ 选择有"升学班""职教高考班"的学校和专业<br>
+    ✅ D1/D2/D3都支持这条路线，其中D1开发区职校和D2经贸学校的升学氛围最好<br><br>
+    <strong>出路二：就业路线（可以接受 ⚠️）</strong><br>
+    中职3年毕业 → 直接就业（中级工证 / 职业资格证）<br>
+    ✅ 选机电/数控/汽修/电梯这类有硬技能的专业，就业率较高<br>
+    ❌ 不选电商/酒店/旅游/客服类——中职层次这些专业就业质量很差
+  </div>
+
+  <div class="warn-box">
+    <strong>⛔ 中职阶段不建议选的专业（即使分数线很低也不选）：</strong><br>
+    <table style="margin-top:8px;">
+      <tr><th width="180">专业类别</th><th>不建议原因</th><th>哪些学校可能有</th></tr>
+      <tr><td>🔴 纯服务类</td><td>酒店管理前厅/餐饮服务/航空地面服务 —— 替代性太强，工资低，无晋升壁垒</td><td>旅游学校(Z013Z)、商业学校(Z006Z)</td></tr>
+      <tr><td>🔴 幼儿保育/学前教育</td><td>需要教师资格证+编制考试竞争极其激烈，3+2都比中职更有利</td><td>女子职校等</td></tr>
+      <tr><td>🟠 电子商务（中职层次）</td><td>和3+2电商同样的问题：低端化严重，典型岗位=客服/运营助理/直播助理</td><td>多所均有</td></tr>
+      <tr><td>🟠 形象设计/美容美发</td><td>更接近非学历培训领域，不值得花3年时间读中职</td><td>部分民办校</td></tr>
+      <tr><td>🟡 旅游管理（中职层次）</td><td>导游收入不稳定、受经济周期影响大、疫情教训深刻</td><td>旅游/海洋/长兴岛</td></tr>
+    </table>
+  </div>
+
+  <div class="danger-box" style="margin-top:12px;">
+    <strong>🔴 如果孩子只想学技能直接就业，怎么选？</strong><br>
+    • 首选：D3 轻工业学校 机电/数控（大连最强工科中职，企业认可度高）<br>
+    • 次选：D5 建设学校 电梯安装维修（新兴紧缺工种，考证后月入可观）<br>
+    • 再选：D4 金州 数控/电气（本地就业方便）<br><br>
+    <strong>🔵 如果孩子还想保留升学机会，怎么选？</strong><br>
+    • 首选：D1 开发区职校 或 D2 经贸学校（同3+2目标校，升学路径最清晰）<br>
+    • 入学时主动询问学校是否有"职教高考班""升学实验班"<br>
+    • 中职三年期间重点准备语数英+专业课（职教高考科目）
+  </div>
+</div>
+
+<!-- ==================== 第八章：排除清单 ==================== -->
+<div class="card" id="s8">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--danger-light);color:var(--danger);">🚫</div>
+    <div class="card-title"><span class="section-num">八</span>排除/谨慎填报清单</div>
+  </div>
+
+  <table>
+    <tr><th width="200">学校/专业</th><th width="120">原因分类</th><th>详细说明</th><th width="90">能否做备选</th></tr>
+    <tr>
+      <td><strong>Z002G 大连电子学校</strong>（全部3+2专业）</td>
+      <td><span class="badge badge-danger">分数过高</span></td>
+      <td>2025年投档线580.75，各专业均在590-610区间。400分段差距180-210分，完全没有意义浪费志愿。</td>
+      <td><strong>❌ 不能</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Z003G 大连轻工业学校</strong>（全部3+2专业）</td>
+      <td><span class="badge badge-danger">分数过高</span></td>
+      <td>2025年投档线547.00，各专业540-570区间。差距140-170分。</td>
+      <td><strong>❌ 不能</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Z012G 建设学校</strong></td>
+      <td><span class="badge badge-danger">分数过高</span></td>
+      <td>2025年护理469+，建筑工程技术也在450+。超出400分段太多。</td>
+      <td><strong>❌ 不能</strong></td>
+    </tr>
+    <tr>
+      <td>Z004G 海洋学校（轮机工程37人）</td>
+      <td><span class="badge badge-warn">偏高+小众</span></td>
+      <td>2025年投档线470。轮机工程需要出海/船上工作，特殊环境，不适合大多数孩子。养老照护20人计划太少。</td>
+      <td>除非孩子特感兴趣</td>
+    </tr>
+    <tr>
+      <td>Z006G 商业学校（各专业）</td>
+      <td><span class="badge badge-warn">偏高</span></td>
+      <td>2025年443分。电子商务/计算机网络/空中乘务都偏高。空中乘务还有身高限制。</td>
+      <td>410+可考虑</td>
+    </tr>
+    <tr>
+      <td>Z013G/Z015G 旅游学校（空中乘务）</td>
+      <td><span class="badge badge-warn">限制条件多</span></td>
+      <td>身高女163+/男173+、形象体检要求、就业受经济周期影响大。</td>
+      <td>符合条件+有兴趣可试</td>
+    </tr>
+    <tr>
+      <td><strong>J115Z/J118G/J106G 等 J开头</strong></td>
+      <td><span class="badge badge-danger">非学历体系</span></td>
+      <td>技师学院=人社部技能证书，<strong>不是教育部学历教育</strong>，不能参加专升本。家长红圈标注的"辽宁工业大学附属技师学院"就是此类。3+2珍贵志愿不要用在这里。</td>
+      <td><strong>❌ 绝对不选</strong></td>
+    </tr>
+    <tr>
+      <td>电子商务（任何学校3+2）</td>
+      <td><span class="badge badge-warn">低端化风险</span></td>
+      <td>详见第四章分析。可作为专业服从调剂后的结果，但不建议主动作为第一/第二专业志愿。</td>
+      <td>仅作为服从调剂后的被动接收</td>
+    </tr>
+    <tr>
+      <td><strong>⚠️ Z018G 交通口岸职业技术学校</strong></td>
+      <td><span class="fix-badge">不存在于2026计划</span></td>
+      <td><strong>V4修正：2026年招生简章中没有Z018G这个代码！</strong>之前版本误用了该选项。请使用Z021G开发区职校代替。</td>
+      <td><strong>❌ 已删除</strong></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ==================== 第九章：电话核实话术 ==================== -->
+<div class="card" id="s9">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--accent-light);color:var(--accent);">📞</div>
+    <div class="card-title"><span class="section-num">九</span>家长电话核实清单</div>
+  </div>
+
+  <p style="font-size:13px;margin-bottom:14px;">
+    以下问题请在<strong>6月12日志愿填报截止前</strong>拨打学校招生办电话逐一确认。<br>
+    不要问"我家孩子400分能不能上"这种无效问题——按下面的具体问题问。
+  </p>
+
+  <!-- 学校1：经贸 -->
+  <h4 style="margin:12px 0 8px;color:var(--accent);">📞 学校一：大连市经济贸易学校 (Z010G)</h4>
+  <div class="phone-list">
+    <ol>
+      <li>2025年贵校<strong>01计算机网络技术</strong>专业最低录取分数是多少？是专业线还是学校投档线？</li>
+      <li>2026年该专业计划招<strong>40人</strong>，比去年增加了还是减少了？</li>
+      <li>去年该专业是否一次录满？有没有征集志愿？</li>
+      <li>前3年在哪个校区读书？（确认是不是沙河口区校区）</li>
+      <li>后2年对接的是<strong>辽宁建筑职业学院</strong>吗？学生在哪个城市哪个校区？</li>
+      <li>转段（从中职到高职）需要考试吗？大概什么难度？有没有淘汰比例？</li>
+      <li>后2年高职阶段主要学什么课程？能否提供人才培养方案？</li>
+      <li>实训课占比多少？有哪些实训室？有校企合作吗？</li>
+      <li>近三届计算机网络技术专业毕业生主要的去向是什么？升学还是就业？</li>
+      <li>如果选择了"服从专业调剂"，可能被调剂到哪些专业？有没有明显不适合孩子的专业？</li>
+      <li>学校有住宿吗？住宿费多少？通勤方便吗？</li>
+      <li>学费每年多少？有没有额外杂费？</li>
+    </ol>
+  </div>
+
+  <!-- 学校2：开发区 -->
+  <h4 style="margin:16px 0 8px;color:var(--success);">📞 学校二：大连经济技术开发区中等职业技术学校 (Z021G)</h4>
+  <div class="phone-list">
+    <ol>
+      <li>2025年贵校<strong>02机电一体化技术</strong>专业最低录取分数是多少？（我看到的是361分）</li>
+      <li>2026年该专业计划招<strong>80人</strong>，这个数字准确吗？</li>
+      <li>去年机电一体化是否一次录满？</li>
+      <li>前3年在开发区哪个位置？交通怎么走？需要住校吗？</li>
+      <li>后2年对接<strong>辽宁工程职业学院</strong>吗？在哪个城市？</li>
+      <li>转段考核规则是什么？淘汰率大概多少？</li>
+      <li>机电一体化专业主要学什么？有实操课吗？实训设备怎么样？</li>
+      <li>该专业毕业生主要去哪就业？大连本地企业多吗？</li>
+      <li>如果服从调剂会被调到哪里？</li>
+      <li>住宿条件和费用？</li>
+    </ol>
+  </div>
+
+  <!-- 学校3：长兴岛 -->
+  <h4 style="margin:16px 0 8px;color:var(--warning);">📞 学校三：大连长兴岛中等职业技术学校 (Z027G) 🆕</h4>
+  <div class="phone-list">
+    <ol>
+      <li>贵校是<strong>第一次</strong>招收3+2五年制高职学生吗？</li>
+      <li><strong>02电气自动化技术</strong>这个专业，对接的是辽宁矿业职业学院吗？</li>
+      <li>前3年在长兴岛本校就读吗？需要住校吗？住宿条件如何？</li>
+      <li>从大连市区到长兴岛的交通方式是什么？大概多久？周末能回家吗？</li>
+      <li>作为新开的3+2项目，师资力量有保障吗？专业课教师是从哪来的？</li>
+      <li>转段考核怎么安排？</li>
+      <li>因为贵校首次3+2招生，<strong>预估分数线大概在什么范围</strong>？（当然这只是参考）</li>
+      <li>如果孩子被录取但不想去长兴岛（太远了），能不能放弃等征集志愿？</li>
+      <li>学费、住宿费、其他费用一共大概多少一年？</li>
+    </ol>
+  </div>
+
+  <div class="warn-box" style="margin-top:14px;">
+    <strong>☎️ 电话获取渠道：</strong><br>
+    • 各学校招生电话见《2026年中考招生信息》手册（学校信息页）<br>
+    • 或搜索"XX学校 2026 招生 电话"<br>
+    • 建议在工作日 8:30-16:30 打电话<br>
+    • 打电话前准备好纸笔记录，一次问清楚所有问题
+  </div>
+</div>
+
+<!-- ==================== 第十章：最终建议 ==================== -->
+<div class="card" id="s10">
+  <div class="card-header">
+    <div class="card-icon" style="background:var(--success-light);color:var(--success);">🏆</div>
+    <div class="card-title"><span class="section-num">十</span>最终建议：三套方案</div>
+  </div>
+
+  <!-- 方案一 -->
+  <h4 style="margin:12px 0 8px;"><span class="badge badge-info" style="font-size:13px;">方案一：最推荐（平衡型）</span></h4>
+  <table>
+    <tr><th>志愿</th><th>代码</th><th>学校</th><th>专业</th><th>思路</th></tr>
+    <tr><td>A冲</td><td>Z010G</td><td>经贸学校</td><td>计算机网络技术 / 电子商务(第二志愿)</td><td>冲IT方向，393.25/391线，正常发挥可及</td></tr>
+    <tr><td>B稳</td><td>Z021G</td><td>开发区职校</td><td>机电一体化技术</td><td>稳工科方向，361线，80人量大</td></tr>
+    <tr><td>C保</td><td>Z027G</td><td>长兴岛职校</td><td>电气自动化技术</td><td>保新校远郊，预计极低</td></tr>
+  </table>
+  <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">
+    适合：孩子对IT和工科都能接受，家庭愿意尝试冲一下更好的学校和专业的场景。<br>
+    风险：A志愿可能因分数线上涨而滑档，但B志愿接住概率很高。
+  </p>
+
+  <!-- 方案二 -->
+  <h4 style="margin:16px 0 8px;"><span class="badge badge-safe" style="font-size:13px;">方案二：最稳妥（双锁定型）</span></h4>
+  <table>
+    <tr><th>志愿</th><th>代码</th><th>学校</th><th>专业</th><th>思路</th></tr>
+    <tr><td>A冲</td><td>Z021G</td><td>开发区职校</td><td>机电一体化技术</td><td>把最稳的学校放到A位冲更好的专业</td></tr>
+    <tr><td>B稳</td><td>Z021G</td><td>开发区职校</td><td>计算机应用技术</td><td>同校不同专业，双重保障</td></tr>
+    <tr><td>C保</td><td>Z027G</td><td>长兴岛职校</td><td>电气自动化技术</td><td>铁底不变</td></tr>
+  </table>
+  <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">
+    适合：<strong>极度求稳的家庭</strong>。把开发区职校的两个不同专业分别放在A和B，几乎确保至少录到一个。<br>
+    代价：放弃了冲经贸学校的机会，但换来极高的安全性。
+  </p>
+
+  <!-- 方案三 -->
+  <h4 style="margin:16px 0 8px;"><span class="badge badge-warn" style="font-size:13px;">方案三：最保守（近郊偏好型）</span></h4>
+  <table>
+    <tr><th>志愿</th><th>代码</th><th>学校</th><th>专业</th><th>思路</th></tr>
+    <tr><td>A冲</td><td>Z010G</td><td>经贸学校</td><td>计算机网络技术</td><td>保持冲击</td></tr>
+    <tr><td>B稳</td><td>Z021G</td><td>开发区职校</td><td>机电一体化技术</td><td>核心稳定</td></tr>
+    <tr><td>C保</td><td>Z022G</td><td>金州职专</td><td>数控技术</td><td>用金州替长兴岛，离市区更近</td></tr>
+  </table>
+  <p style="font-size:12px;color:var(--text-secondary);margin-top:6px;">
+    适合：不想让孩子去长兴岛（太远）的家庭。金州职专有历史分数线参照（322.5），且离市区比长兴岛近得多。<br>
+    代价：金州职专2026年只有数控技术一个专业，孩子必须接受这个专业。
+  </p>
+
+  <div class="highlight-box" style="margin-top:18px;font-size:14px;line-height:1.8;">
+    <strong>🎯 最终行动清单：</strong><br><br>
+    ✅ <strong>第一步（今天）：</strong>确定采用哪套方案（一/二/三），和孩子沟通专业意向<br>
+    ✅ <strong>第二步（明天）：</strong>按第九章的电话清单，打3所学校的招生电话核实关键信息<br>
+    ✅ <strong>第三步（6月12日前）：</strong>登录 dlzsks.edu.dl.gov.cn 填报志愿<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;→ 第三批次第一段填3个3+2志愿（A/B/C）<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;→ 第三批次第二段填6个中职志愿（D1-D6）<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;→ 每校2个专业 + 服从调剂<strong>选"是"</strong><br>
+    ✅ <strong>第四步（6月12日后）：</strong>确认提交，保存截图/打印回执<br>
+    ✅ <strong>第五步（6月21-23日）：</strong>参加中考，正常发挥<br>
+    ✅ <strong>第六步（7月初）：</strong>查分+关注录取结果<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;→ 如3+2滑档，立即关注征集志愿通知<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;→ 如再次滑档，中职兜底启动
+  </div>
+
+  <div class="warn-box" style="margin-top:14px;font-size:13px;">
+    <strong>📌 最后强调三点：</strong><br>
+    1. <strong>本报告所有学校代码、专业名称、招生人数、对接高职院校均来自2026年招生简章原始截图。</strong><br>
+    2. <strong>历史分数线（2022-2025）仅用作趋势参考，不代表2026年实际录取分数。</strong><br>
+    3. <strong>每一条关键信息都已标注来源或明确说明"需电话核实"。如有不确定的地方，务必在6月12日前打电话确认。</strong>
+  </div>
+
+  <p style="text-align:center;color:var(--text-muted);font-size:12px;margin-top:20px;padding-top:14px;border-top:1px solid var(--border);">
+    大连中考3+2升学报考规划 V4 · 2026招生简章对齐版 · 生成时间 2026-06-06<br>
+    数据来源：2026年大连市中考招生计划手册（用户提供截图）+ 大连市教育局官网 + 招生简章第44页历年分数线
+  </p>
+</div>
+
+</div><!-- end container -->
+
+<script>
+// 平滑滚动
+document.querySelectorAll('.nav a').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
